@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractDicomConsole", "ExtractDicomConsole\ExtractDicomConsole.csproj", "{73052E64-F945-40E1-91E0-8D8EBF58362B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWECVI.ApplicationCore", "SWECVI.ApplicationCore\SWECVI.ApplicationCore.csproj", "{2F1E3A72-D5BC-4710-AC25-F095829F9C7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWECVI.Database", "SWECVI.Database\SWECVI.Database.csproj", "{5D0542B6-4085-4A46-8BF1-59790320CBF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWECVI.Infrastructure", "SWECVI.Infrastructure\SWECVI.Infrastructure.csproj", "{BC2EFDCD-77A3-4D77-9123-3D64B2BD9C09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWECVI.Web", "SWECVI.Web\SWECVI.Web.csproj", "{A4C3FDB8-5829-43C1-87DA-AC9F24C3D5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirthConnectApi", "MirthConnectApi\MirthConnectApi.csproj", "{A222A4E4-AD74-4DFC-ADDC-B4C0A420A59D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73052E64-F945-40E1-91E0-8D8EBF58362B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73052E64-F945-40E1-91E0-8D8EBF58362B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73052E64-F945-40E1-91E0-8D8EBF58362B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73052E64-F945-40E1-91E0-8D8EBF58362B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1E3A72-D5BC-4710-AC25-F095829F9C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1E3A72-D5BC-4710-AC25-F095829F9C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1E3A72-D5BC-4710-AC25-F095829F9C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1E3A72-D5BC-4710-AC25-F095829F9C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0542B6-4085-4A46-8BF1-59790320CBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0542B6-4085-4A46-8BF1-59790320CBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0542B6-4085-4A46-8BF1-59790320CBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0542B6-4085-4A46-8BF1-59790320CBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2EFDCD-77A3-4D77-9123-3D64B2BD9C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2EFDCD-77A3-4D77-9123-3D64B2BD9C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2EFDCD-77A3-4D77-9123-3D64B2BD9C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2EFDCD-77A3-4D77-9123-3D64B2BD9C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C3FDB8-5829-43C1-87DA-AC9F24C3D5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C3FDB8-5829-43C1-87DA-AC9F24C3D5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C3FDB8-5829-43C1-87DA-AC9F24C3D5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C3FDB8-5829-43C1-87DA-AC9F24C3D5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A222A4E4-AD74-4DFC-ADDC-B4C0A420A59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A222A4E4-AD74-4DFC-ADDC-B4C0A420A59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A222A4E4-AD74-4DFC-ADDC-B4C0A420A59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A222A4E4-AD74-4DFC-ADDC-B4C0A420A59D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8793DEE4-1A80-4175-8E1E-AA7466A51104}
+	EndGlobalSection
+EndGlobal

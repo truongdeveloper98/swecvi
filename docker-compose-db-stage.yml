@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: swecvi_db_stage
+    restart: always
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Asdfgh1@3
+      - MSSQL_PID=Express
+    volumes:
+      - /home/marscode/SWECVI/data:/var/opt/mssql/data

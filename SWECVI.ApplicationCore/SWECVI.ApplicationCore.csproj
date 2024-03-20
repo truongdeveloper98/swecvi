@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.12" />
+    <PackageReference Include="IronXL.Excel" Version="2024.1.21" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0-rc.2.22472.3" />
+    <PackageReference Include="NEST" Version="7.17.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+    <PackageReference Include="PasswordGenerator" Version="2.1.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.20" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.22.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.22.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores " Version="6.0.25" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+      <None Update="PythonScript/Logic/**">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="PythonScript/Constants/**">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="PythonScript/DTOs/**">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+       <None Update="PythonScript/Helpers/**">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="PythonScript/Libs/**">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+       <None Update="PythonScript/generate_assessment.py">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+       <None Update="PythonScript\NewPython\AortaStenosis.py">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+       </None>
+       <None Update="PythonScript\NewPython\AortaInsufficiens.py">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+       </None>
+       <None Update="PythonScript\NewPython\AortaRootDimensen.py">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+       </None>
+       <None Update="PythonScript\NewPython\LADimension.py">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+       </None>
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Extensions.Identity.Stores" Version="6.0.25" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,132 @@
+var mapping = '';
+
+var parameters = [];
+
+var err = '';
+
+var Name = '';
+var NameCode = '';
+var Value = '';
+var ValueUnit = '';
+var ValueUnitCode = '';
+var bsa = '';
+
+
+
+try {
+
+	var patientName = msg['tag00100010'].toString();
+	var patientSex  = msg['tag00100040'].toString();
+	var patientDate = msg['tag00100030'].toString();
+	var patientId   = msg['tag00100020'].toString();
+	var studyDate   = msg['tag00080020'].toString();
+	var studyTime   = msg['tag00080030'].toString();
+	var studyDescription = msg['tag00081030'].toString();
+	var studyInstanceUID = msg['tag0020000D'].toString();
+	var studyId = msg['tag00020010'].toString();
+	var institutionName = msg['tag00080080'].toString();
+     var sOPClassUID = msg['tag00080016'].toString();
+     var sOPInstanceUID = msg['tag00080018'].toString();
+     var accessionNumber = msg['tag00080050'].toString();
+     var institutionalDepartmentName = msg['tag00080080'].toString();
+     var studyWeight = msg['tag00101030'].toString();
+     var studyHeight = msg['tag00101020'].toString();
+     var manufacture = msg['tag00080070'].toString();
+     var manufactureName = msg['tag00081090'].toString();
+     var modalitiesInStudy = msg['tag00081061'].toString();
+     
+     
+    for each ( item in msg['tag0040A730']['item']) 
+    {
+		if(item.toString().length > 0 && item['tag0040A730']['item'].toString().length > 0)
+		{
+	        for each ( item2 in item['tag0040A730']['item'])
+	        {
+	        	if(item2['tag0040A043']['item']['tag00080104'].toString() == 'Body Surface Area')
+	        	{
+	        		bsa = item2['tag0040A300']['item']['tag0040A30A'].toString();
+	        	}
+	        	
+	        	if(item2.toString().length > 0 && item2['tag0040A730']['item'].toString().length > 0)
+			{
+				for each ( item3 in item2['tag0040A730']['item'])
+	               {
+	               	if(item3['tag0040A300'].toString().length > 0)
+	               	{
+
+		                        Name = item3['tag0040A043']['item']['tag00080104'].toString();
+		                        NameCode = item3['tag0040A043']['item']['tag00080102'].toString() + " | " + item3['tag0040A043']['item']['tag00080100'].toString();
+		                        Value = item3['tag0040A300']['item']['tag0040A30A'].toString();
+		                        ValueUnit = item3['tag0040A300']['item']['tag004008EA']['item']['tag00080104'].toString();
+		                        ValueUnitCode = item3['tag0040A300']['item']['tag004008EA']['item']['tag00080102'].toString() + " | " + item3['tag0040A300']['item']['tag004008EA']['item']['tag00080100'].toString();
+	               	}
+
+	               	var parameterDetails = [];
+
+	               	if (item3['tag0040A730']['item'].toString().length > 0)
+                         {
+                         	for each (tag2 in item3['tag0040A730']['item'])
+                              {
+                                 var parameterDetail = 
+                                 {
+                                 	NameDetail : tag2['tag0040A010'].toString(),
+                                 	Name : tag2['tag0040A043']['item']['tag00080104'].toString(),
+                                   NameCode : tag2['tag0040A043']['item']['tag00080102'].toString() + " | " + tag2['tag0040A043']['item']['tag00080100'].toString(),
+                                   Value : tag2['tag0040A168']['item']['tag00080104'].toString(),
+                                   ValueCode : tag2['tag0040A168']['item']['tag00080102'].toString() + " | " + tag2['tag0040A168']['item']['tag00080100'].toString(),
+                                 };
+
+                                 parameterDetails.push(parameterDetail);
+                              }
+                         }
+
+                         var partient = 
+                         {
+                         	Name : Name,
+                         	NameCode : NameCode,
+                         	Value : Value,
+                         	ValueUnit : ValueUnit,
+                         	ValueUnitCode : ValueUnitCode,
+                         	ParameterDetails : parameterDetails
+                         };
+
+                         parameters.push(partient);
+	               }
+			}
+	        }
+		}
+    }
+
+
+   var model = 
+   {
+   	PatientName :patientName,
+   	PatientSex : patientSex,
+   	PatientDate : patientDate,
+   	PatientId : patientId,
+   	StudyDate : studyDate,
+   	StudyTime : studyTime,
+   	StudyDescription : studyDescription,
+   	StudyInstanceUID : studyInstanceUID,
+   	StudyId : studyId,
+   	Manufacture : manufacture,
+   	ManufactureName : manufactureName,
+   	ModalitiesInStudy : modalitiesInStudy,
+   	BSA : bsa,
+   	InstitutionName : institutionName,
+     SOPClassUID : sOPClassUID,
+   	SOPInstanceUID : sOPInstanceUID,
+   	AccessionNumber : accessionNumber,
+   	InstitutionalDepartmentName : institutionalDepartmentName,
+   	StudyWeight : studyWeight,
+   	StudyHeight : studyHeight,
+   	Parameters : parameters
+   };
+
+   mapping = JSON.stringify(model);
+    
+} catch (e) {
+    err = e.getMessage();
+}
+
+channelMap.put('xmlObject', validate(mapping, err, new Array()));

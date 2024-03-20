@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SWECVI.ApplicationCore\SWECVI.ApplicationCore.csproj" />
+    <ProjectReference Include="..\SWECVI.Database\SWECVI.Database.csproj" />
+    <ProjectReference Include="..\SWECVI.Infrastructure\SWECVI.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

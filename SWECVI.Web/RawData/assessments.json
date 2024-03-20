@@ -1,0 +1,4180 @@
+﻿[
+    {
+        "Assessment Key": 353,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 45,
+        "Assessment Text": "Lätt dilaterad."
+    },
+    {
+        "Assessment Key": 318,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 12,
+        "Assessment Text": "Aortainsufficiens: Lindrig.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 319,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 16,
+        "Assessment Text": "Aortainsufficiens: Uttalad.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 320,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 13,
+        "Assessment Text": "Aortainsufficiens: Lindrig till måttlig.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 321,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 15,
+        "Assessment Text": "Aortainsufficiens: Måttlig till uttalad.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 322,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 12,
+        "Assessment Text": "Mitralisinsufficiens: Lindrig.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 323,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 13,
+        "Assessment Text": "Mitralisinsufficiens: Lindrig till måttlig.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 354,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 46,
+        "Assessment Text": "Måttligt dilaterad."
+    },
+    {
+        "Assessment Key": 325,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 15,
+        "Assessment Text": "Mitralisinsufficiens: Måttlig till uttalad.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 326,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 16,
+        "Assessment Text": "Mitralisinsufficiens: Uttalad.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 355,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 47,
+        "Assessment Text": "Uttalat dilaterad."
+    },
+    {
+        "Assessment Key": 328,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 12,
+        "Assessment Text": "Tricuspidalisinsufficiens: Lindrig."
+    },
+    {
+        "Assessment Key": 312,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 116,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 330,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 14,
+        "Assessment Text": "Tricuspidalisinsufficiens: Måttlig."
+    },
+    {
+        "Assessment Key": 331,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 16,
+        "Assessment Text": "Tricuspidalisinsufficiens: Uttalad."
+    },
+    {
+        "Assessment Key": 333,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 12,
+        "Assessment Text": "Pulmonalisinsufficiens: Lindrig."
+    },
+    {
+        "Assessment Key": 334,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 14,
+        "Assessment Text": "Pulmonalisinsufficiens: Måttlig."
+    },
+    {
+        "Assessment Key": 335,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 16,
+        "Assessment Text": "Pulmonalisinsufficiens: Uttalad."
+    },
+    {
+        "Assessment Key": 313,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 111,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 338,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 12,
+        "Assessment Text": "Aortastenos: Lindrig."
+    },
+    {
+        "Assessment Key": 339,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 14,
+        "Assessment Text": "Aortastenos: Måttlig"
+    },
+    {
+        "Assessment Key": 340,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 16,
+        "Assessment Text": "Aortastenos: Uttalad."
+    },
+    {
+        "Assessment Key": 342,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 12,
+        "Assessment Text": "Mitralis stenos: Lindrig."
+    },
+    {
+        "Assessment Key": 343,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 14,
+        "Assessment Text": "Mitralis stenos: Måttlig."
+    },
+    {
+        "Assessment Key": 344,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 16,
+        "Assessment Text": "Mitralis stenos: Uttalad."
+    },
+    {
+        "Assessment Key": 346,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 12,
+        "Assessment Text": "Tricuspidalisstenos:  Lindrig."
+    },
+    {
+        "Assessment Key": 347,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 14,
+        "Assessment Text": "Tricuspidalisstenos:  Måttlig."
+    },
+    {
+        "Assessment Key": 348,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 16,
+        "Assessment Text": "Tricuspidalisstenos: Uttalad."
+    },
+    {
+        "Assessment Key": 350,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 12,
+        "Assessment Text": "Pulmonalisstenos: Lindrig."
+    },
+    {
+        "Assessment Key": 351,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 14,
+        "Assessment Text": "Pulmonalisstenos: Måttlig."
+    },
+    {
+        "Assessment Key": 352,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 16,
+        "Assessment Text": "Pulmonalisstenos: Uttalad."
+    },
+    {
+        "Assessment Key": 356,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 13,
+        "Assessment Text": "Regional hypokinesi  i motsvarande LCx området.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 357,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 358,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 359,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för väntserkammares dimensioner."
+    },
+    {
+        "Assessment Key": 360,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för vänsterkammares diastoliskafunktion."
+    },
+    {
+        "Assessment Key": 361,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för systolisk funktion."
+    },
+    {
+        "Assessment Key": 362,
+        "Languages Key": 1,
+        "Assessment Call Function": 60,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för höger förmak."
+    },
+    {
+        "Assessment Key": 363,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för högerkammares dimension."
+    },
+    {
+        "Assessment Key": 364,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för högerkammares funktion."
+    },
+    {
+        "Assessment Key": 367,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för mitralisinsufficiens."
+    },
+    {
+        "Assessment Key": 368,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden för Tricuspidalisinsufficiens."
+    },
+    {
+        "Assessment Key": 365,
+        "Languages Key": 1,
+        "Assessment Call Function": 100,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden.",
+        "Last Modified When": "2018-01-12T14: 53: 53"
+    },
+    {
+        "Assessment Key": 366,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 369,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 370,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 371,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 372,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 373,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 700,
+        "Assessment Text": "Saknas referensvärden."
+    },
+    {
+        "Assessment Key": 374,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 700,
+        "Assessment Text": "Det saknas referensvärden för bedömning av PA tryck.\r\n",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 376,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 12,
+        "Assessment Text": "",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 377,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 16,
+        "Assessment Text": "Visuellt bedömt normala fyllnadstryck.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 378,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 375,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 700,
+        "Assessment Text": "Det saknas referensvärden för bedömning av vänsterkammares regionalitet.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 1,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 100,
+        "Assessment Text": "------------------------------------------------------------------------",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 2,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 101,
+        "Assessment Text": ".-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 3,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 102,
+        "Assessment Text": "........................................................................................................................",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 4,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 110,
+        "Assessment Text": "BASDATA",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 5,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 120,
+        "Assessment Text": "MÄTRESULTAT",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 6,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 130,
+        "Assessment Text": "VÄNSTERKAMMARE",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 7,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 131,
+        "Assessment Text": "- Dimensioner volymer och massa: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 8,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 132,
+        "Assessment Text": "- Systoliska parametrar: ",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 9,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 133,
+        "Assessment Text": "- Diastoliska parametrar: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 10,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 140,
+        "Assessment Text": "FÖRMAK",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 11,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 150,
+        "Assessment Text": "HÖGERKAMMARE",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 12,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 151,
+        "Assessment Text": "- Dimensioner: ",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 13,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 152,
+        "Assessment Text": "- Funktion: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 14,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 160,
+        "Assessment Text": "KLAFFAR",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 15,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 161,
+        "Assessment Text": "- Aorta: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 16,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 162,
+        "Assessment Text": "- Mitralis: ",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 17,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 163,
+        "Assessment Text": "- Tricuspidalis: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 18,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 164,
+        "Assessment Text": "- Pulmonalis: ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 19,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 170,
+        "Assessment Text": "ÖVRIGT",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 20,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 180,
+        "Assessment Text": "BEDÖMNING",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 21,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 190,
+        "Assessment Text": "STRESS TEST",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 22,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 200,
+        "Assessment Text": "SAMMANFATTNING \/ RELEVANT PATOLOGI",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 23,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 201,
+        "Assessment Text": "Normalstora välfungerande VK o HK. Samtliga klaffar är välfungerande med normal morfologi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 24,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 210,
+        "Assessment Text": "(EF, EDV och ESV har inte kunnat beräknats - mätdata saknas)",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 25,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 211,
+        "Assessment Text": "(3D)",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 26,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 212,
+        "Assessment Text": "(Triplane) ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 27,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 213,
+        "Assessment Text": "(Biplane Simpson)",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 28,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 214,
+        "Assessment Text": "(Simpson 4ch)",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 29,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 215,
+        "Assessment Text": "(Simpson 2ch)",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 30,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 216,
+        "Assessment Text": "(AutoEF biplane)",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 31,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 217,
+        "Assessment Text": "(AutoEF 4ch)",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 32,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 218,
+        "Assessment Text": "(AutoEF 2ch)",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 33,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 220,
+        "Assessment Text": "(TAPSE har beräknats med: Tissue Tracking)",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 34,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 221,
+        "Assessment Text": "(TAPSE har beräknats med: 2D)",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 35,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 222,
+        "Assessment Text": "(TAPSE har beräknats med: MMODE)",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 36,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 223,
+        "Assessment Text": "(TAPSE har inte kunnat beräknats - mätdata saknas)",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 37,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 300,
+        "Assessment Text": "No parameters values was found in this examination.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 38,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 310,
+        "Assessment Text": "Normalfynd.  ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 39,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 320,
+        "Assessment Text": "Dobutrexinfusion stegvis till 40 ug\/min\/kg,0.5 mg atropin. 3 ml Optison. 5 mg seloken.\r\nAdekvat belastning med slutpuls 160. Ingen bröstsmärta. Ingen arytmi frånsett sinustakykardi. \r\n \r\nRESULTAT STRESSEKO:\r\nGenerellt ökande radiell kontraktilitet utan tillkomst av regional hypokinesi, nedsatt eller postsystolisk strain. \r\nNormal uppmätt koronar flödesreserv i LAD;\r\nUppmätt diastolisk maxhastighet i distala LAD ökar från 20 till 50 cm\/s.\r\n \r\nBEDÖMNING\/SAMMANFATTNING STRESSEKO:\r\nIngen signifikant detekterbarmyokardischemi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 40,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 330,
+        "Assessment Text": "Normalstora välfungerande VK o HK. Samtliga klaffar är välfungerande med normal morfologi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 41,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 340,
+        "Assessment Text": "Patologiska fynd enligt nedan.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 42,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 350,
+        "Assessment Text": "Samtliga klaffar är välfungerande.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 43,
+        "Languages Key": 1,
+        "Assessment Call Function": 0,
+        "Assessment Level": 360,
+        "Assessment Text": "Övriga klaffar är välfungerande.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 44,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av aortarot\/ascendens eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 45,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning  av aortarot\/ascendens är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 46,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 11,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 47,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 12,
+        "Assessment Text": "Normalvid aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 48,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 13,
+        "Assessment Text": "Normalvid aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 49,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 14,
+        "Assessment Text": "Aortarot under nedre referens, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 50,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 15,
+        "Assessment Text": "Aortarot under nedre referens, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 51,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 16,
+        "Assessment Text": "Aortarot under nedre referens, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 52,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 17,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 53,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 18,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 54,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 19,
+        "Assessment Text": "Dilaterad aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 55,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 20,
+        "Assessment Text": "Aortarot under nedre referens, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 56,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 21,
+        "Assessment Text": "Aortarot under nedre referens, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 57,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 22,
+        "Assessment Text": "Aortarot under nedre referens, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 58,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 23,
+        "Assessment Text": "Aortarot under nedre referens, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 59,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 24,
+        "Assessment Text": "Aortarot under nedre referens, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 60,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 25,
+        "Assessment Text": "Aortarot under nedre referens, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 61,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 26,
+        "Assessment Text": "Dilaterad aortarot,  normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 62,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 27,
+        "Assessment Text": "Dilaterad aortarot,  aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 63,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 28,
+        "Assessment Text": "Dilaterad aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 64,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 29,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 65,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 30,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 66,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 31,
+        "Assessment Text": "Dilaterad aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 67,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 32,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 68,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 33,
+        "Assessment Text": "Dilaterad aortarot,  aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 69,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 34,
+        "Assessment Text": "Dilaterad aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 70,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 35,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 71,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 36,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 72,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 37,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter över referens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 73,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 38,
+        "Assessment Text": "Normalvid aortarot.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 74,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 39,
+        "Assessment Text": "Aortarot under nedre referens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 75,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 40,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 76,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 41,
+        "Assessment Text": "Aortarot under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 77,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 42,
+        "Assessment Text": "Aortarot under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 78,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 43,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 79,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 44,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 80,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 45,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 81,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 46,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 82,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 47,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 83,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 48,
+        "Assessment Text": "Normalvid aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 84,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 49,
+        "Assessment Text": "Normalvid aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 85,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 50,
+        "Assessment Text": "Aortarot under nedre referens, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 86,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 51,
+        "Assessment Text": "Aortarot under nedre referens, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 87,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 52,
+        "Assessment Text": "Aortarot under nedre referens, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 88,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 53,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 89,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 54,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10:57:18"
+    },
+    {
+        "Assessment Key": 90,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 55,
+        "Assessment Text": "Dilaterad aortarot,dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 91,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 56,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-19T13:11:38"
+    },
+    {
+        "Assessment Key": 92,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 57,
+        "Assessment Text": "Normalvid aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10:57:16"
+    },
+    {
+        "Assessment Key": 93,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 58,
+        "Assessment Text": "Normalvid aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10:57:18"
+    },
+    {
+        "Assessment Key": 94,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 59,
+        "Assessment Text": "Aortarot under nedre referens, normalvid aorta ascendens.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 95,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 60,
+        "Assessment Text": "Aortarot under nedre referens, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-19T13:11:38"
+    },
+    {
+        "Assessment Key": 96,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 61,
+        "Assessment Text": "Aortarot under nedre referens, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-03-12T10:57:16"
+    },
+    {
+        "Assessment Key": 97,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 62,
+        "Assessment Text": "Dilaterad aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10:57:18"
+    },
+    {
+        "Assessment Key": 98,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 63,
+        "Assessment Text": "Dilaterad aortarot, aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 99,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 64,
+        "Assessment Text": "Dilaterad aortarot, dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 100,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 65,
+        "Assessment Text": "Normalvid aorta ascendens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 101,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 66,
+        "Assessment Text": "Aorta ascendensdiameter under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 102,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 67,
+        "Assessment Text": "Dilaterad aorta ascendens.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 103,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 68,
+        "Assessment Text": "Normalvid aortarot.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 104,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 69,
+        "Assessment Text": "Aortarot under nedre referens.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 105,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 70,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 106,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 71,
+        "Assessment Text": "Normalvid aortarot.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 107,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 72,
+        "Assessment Text": "Aortarot under nedre referens.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 108,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 73,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 109,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalstort vänster förmak.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 110,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 11,
+        "Assessment Text": "Lätt dilaterat vänster förmak.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 111,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 12,
+        "Assessment Text": "Måttligt dilaterat vänster förmak",
+        "Last Modified When": "2017-02-19T13:11:38"
+    },
+    {
+        "Assessment Key": 112,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 13,
+        "Assessment Text": "Uttalat dilaterat vänster förmak.",
+        "Last Modified When": "2017-03-12T10:57:16"
+    },
+    {
+        "Assessment Key": 113,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av vänsterförmaksstorlek eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10:57:18"
+    },
+    {
+        "Assessment Key": 114,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 800,
+        "Assessment Text": "Vänsterförmaksstorlek under nedre normal referens.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 115,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalstor utan hypertrofi.",
+        "Last Modified When": "2017-02-19T13:11:38"
+    },
+    {
+        "Assessment Key": 116,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 11,
+        "Assessment Text": "Normalstor med koncentrisk remodellering.",
+        "Last Modified When": "2017-03-12T10:57:16"
+    },
+    {
+        "Assessment Key": 117,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 12,
+        "Assessment Text": "Normalstor med lindrig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10:57:18"
+    },
+    {
+        "Assessment Key": 118,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 13,
+        "Assessment Text": "Normalstor med lindrig excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21:05:01"
+    },
+    {
+        "Assessment Key": 119,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 14,
+        "Assessment Text": "Normalstor med måttlig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 120,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 15,
+        "Assessment Text": "Normalstor med måttlig excentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 121,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 16,
+        "Assessment Text": "Normalstor med uttalad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 122,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 17,
+        "Assessment Text": "Normalstor med uttalad excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 123,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 18,
+        "Assessment Text": "Lätt dilaterad utan hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 124,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 19,
+        "Assessment Text": "Lätt dilaterad med koncentrisk remodellering.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 125,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 20,
+        "Assessment Text": "Lätt dilaterad med lindrig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 126,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 21,
+        "Assessment Text": "Lätt dilaterad med lindrig excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 127,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 22,
+        "Assessment Text": "Lätt dilaterad med måttlig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 128,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 23,
+        "Assessment Text": "Lätt dilaterad med måttlig excentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 129,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 24,
+        "Assessment Text": "Lätt dilaterad med uttalad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 130,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 25,
+        "Assessment Text": "Lätt dilaterad med uttalad excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 131,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 26,
+        "Assessment Text": "Måttligt dilaterad utan hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 132,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 27,
+        "Assessment Text": "Måttligt dilaterad med koncentrisk remodellering.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 133,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 28,
+        "Assessment Text": "Måttligt dilaterad med lindrig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 134,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 29,
+        "Assessment Text": "Måttligt dilaterad med lindrig excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 135,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 30,
+        "Assessment Text": "Måttligt dilaterad med måttlig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 136,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 31,
+        "Assessment Text": "Måttligt dilaterad med måttlig excentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 137,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 32,
+        "Assessment Text": "Måttligt dilaterad med uttalad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 138,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 33,
+        "Assessment Text": "Måttligt dilaterad med uttalad excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 139,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 34,
+        "Assessment Text": "Uttalat dilaterad utan hypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 140,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 35,
+        "Assessment Text": "Uttalat dilaterad med koncentrisk remodellering.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 141,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 36,
+        "Assessment Text": "Uttalat dilaterad med lindrig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 142,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 37,
+        "Assessment Text": "Uttalat dilaterad med lindrig excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 143,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 38,
+        "Assessment Text": "Uttalat dilaterad med lindrig koncentriskhypertrofi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 144,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 39,
+        "Assessment Text": "Uttalat dilaterad med måttlig excentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 145,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 40,
+        "Assessment Text": "Uttalat dilaterad med uttalad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 146,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 41,
+        "Assessment Text": "Uttalat dilaterad med uttalad excentrisk hypertrofi.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 147,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av dimension och hypertrofi eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 148,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning dimension och hypertrofi är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 149,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 0,
+        "Assessment Text": "Normal diastoliskfunktion utan hållpunkter för ökat fyllnadstryck.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 150,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 11,
+        "Assessment Text": "Svårbedömd diastolisk funktion.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 151,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 12,
+        "Assessment Text": "Lindrig diastolisk dysfunktion; relaxationsstörning utan hållpunkter för ökat fyllnadstryck.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 152,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 13,
+        "Assessment Text": "Måttlig diastolisk dysfunktion; pseudonormalt fyllnadsmönster med ökat fyllnadstryck.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 153,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 14,
+        "Assessment Text": "Uttalad diastolisk dysfunktion; restriktivt fyllnadsmönster med ökat fyllnadstryck.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 154,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 15,
+        "Assessment Text": "Diastolisk dysfunktion, svårbedömda fyllnadstryck.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 155,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av diastolisk funktion är utanför mätgränser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 156,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 0,
+        "Assessment Text": "Normal global systolisk funktion.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 157,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 11,
+        "Assessment Text": "Uttalat nedsatt global systolisk funktion.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 158,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 12,
+        "Assessment Text": "Måttligt nedsatt global systolisk funktion.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 159,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 13,
+        "Assessment Text": "Lätt nedsatt global systolisk funktion.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 160,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 14,
+        "Assessment Text": "Reserv.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 313,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 27,
+        "Assessment Text": "Aortastenos: Svårbedömd.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 315,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  aortastenos eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 316,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  aortastenos är utanför mätgränser eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 167,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av funktion eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 168,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av funktion är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 169,
+        "Languages Key": 1,
+        "Assessment Call Function": 60,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalstort höger förmak.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 170,
+        "Languages Key": 1,
+        "Assessment Call Function": 60,
+        "Assessment Level": 11,
+        "Assessment Text": "Dilaterat höger förmak.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 171,
+        "Languages Key": 1,
+        "Assessment Call Function": 60,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av höger förmak eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 172,
+        "Languages Key": 1,
+        "Assessment Call Function": 60,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av höger förmak är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 173,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalstor.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 174,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 11,
+        "Assessment Text": "Svårbedömd storlek och eller under referensvärden.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 175,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 12,
+        "Assessment Text": "Dilaterad högerkammare.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 176,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av höger kammare eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 177,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av storlek är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 178,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 0,
+        "Assessment Text": "Normal longitudinell funktion.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 179,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 11,
+        "Assessment Text": "Svårbedömd funktion och eller under referensvärden.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 180,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 12,
+        "Assessment Text": "Nedsatt longitudinell funktion.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 181,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av högerkammare eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 182,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av högerkammare  är utanför mätgränser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 183,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 0,
+        "Assessment Text": "Ingen regional hypokinesi.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 184,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 11,
+        "Assessment Text": "Regional hypokinesi i motsvarande LAD området.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 185,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 12,
+        "Assessment Text": "Regional hypokinesi i motsvarande RCA området.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 186,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av vänsterkammares regionalitet eller saknade referenser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 187,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av vänsterkammares regionalitet är utanför mätgränser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 188,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 0,
+        "Assessment Text": "Normalt systolisk PA tryck.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 189,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 11,
+        "Assessment Text": "Ökat systolisk PA tryck.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 190,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av PA tryck.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 191,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av systolisk PA tryck är utanför mätgränser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 192,
+        "Languages Key": 1,
+        "Assessment Call Function": 100,
+        "Assessment Level": 0,
+        "Assessment Text": "Bägge förmaken är normalstora.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 193,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 0,
+        "Assessment Text": "Aortainsufficiens: Ingen.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 195,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 21,
+        "Assessment Text": "Aortainsufficiens: Lindrig.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 196,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 22,
+        "Assessment Text": "Aortainsufficiens: Lindrig till måttlig.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 198,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 23,
+        "Assessment Text": "Aortainsufficiens: Måttlig till uttalad.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 199,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 24,
+        "Assessment Text": "Aortainsufficiens: Uttalad.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 200,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 25,
+        "Assessment Text": "Aortainsufficiens: Svårbedömd.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 201,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  aortainsufficiens eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 202,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  aortainsufficiens är utanför mätgränser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 203,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 0,
+        "Assessment Text": "Mitralisinsufficiens: Ingen.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 205,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 21,
+        "Assessment Text": "Mitralisinsufficiens: Lindrig.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 206,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 22,
+        "Assessment Text": "Mitralisinsufficiens: Lindrig till måttlig.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 312,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av vänsterkammares diastoliskafunktion eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 208,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 23,
+        "Assessment Text": "Mitralisinsufficiens: Måttlig till uttalad.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 209,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 24,
+        "Assessment Text": "Mitralisinsufficiens: Uttalad.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 210,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 25,
+        "Assessment Text": "Mitralisinsufficiens: Svårbedömd.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 211,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av   mitralisinsufficiens eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 212,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  mitralisinsufficiens är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 213,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 0,
+        "Assessment Text": "Tricuspidalisinsufficiens: Ingen.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 215,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 21,
+        "Assessment Text": "Tricuspidalisinsufficiens: Lindrig.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 217,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 22,
+        "Assessment Text": "Tricuspidalisinsufficiens: Måttlig.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 219,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 23,
+        "Assessment Text": "Tricuspidalisinsufficiens: Uttalad.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 220,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 24,
+        "Assessment Text": "Tricuspidalisinsufficiens: Svårbedömd.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 221,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  tricuspidalisinsufficiens eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 222,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  tricuspidalisinsufficiens är utanför mätgränser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 223,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 0,
+        "Assessment Text": "Pulmonalisinsufficiens: Ingen.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 225,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 21,
+        "Assessment Text": "Pulmonalisinsufficiens: Lindrig.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 227,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 22,
+        "Assessment Text": "Pulmonalisinsufficiens: Måttlig.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 379,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 14,
+        "Assessment Text": "Regional hypokinesi (se BE-plot).",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 229,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 23,
+        "Assessment Text": "Pulmonalisinsufficiens: Uttalad.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 230,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 24,
+        "Assessment Text": "Pulmonalisinsufficiens: Svårbedömd.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 231,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  pulmonalisinsufficiens eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 232,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  pulmonalisinsufficiens är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 233,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 0,
+        "Assessment Text": "Aortastenos: Ingen.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 234,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 21,
+        "Assessment Text": "Aortastenos: Obetydlig.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 235,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 22,
+        "Assessment Text": "Aortastenos: Lindrig.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 237,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 23,
+        "Assessment Text": "Aortastenos: Lindrig till måttlig.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 239,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 24,
+        "Assessment Text": "Aortastenos: Måttlig",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 240,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 25,
+        "Assessment Text": "Aortastenos: Måttlig till uttalad.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 241,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 26,
+        "Assessment Text": "Aortastenos: Uttalad.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 243,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 0,
+        "Assessment Text": "Mitralis stenos: Ingen.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 244,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 21,
+        "Assessment Text": "Mitralis stenos: Obetydlig.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 245,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 22,
+        "Assessment Text": "Mitralis stenos: Lindrig.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 246,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 23,
+        "Assessment Text": "Mitralis stenos: Måttlig.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 247,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 24,
+        "Assessment Text": "Mitralis stenos: Uttalad.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 248,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 25,
+        "Assessment Text": "Mitralis stenos: Svårbedömd.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 251,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  mitralisstenos eller saknade referenser.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 252,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av  mitralisstenos är utanför mätgränser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 253,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 0,
+        "Assessment Text": "Tricuspidalisstenos: Ingen.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 254,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 21,
+        "Assessment Text": "Tricuspidalisstenos: Uttalad.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 255,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 22,
+        "Assessment Text": "Tricuspidalisstenos: Bedömd som stenos.",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 260,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 23,
+        "Assessment Text": "Tricuspidalisstenos: Svårbedömd.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 261,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av  tricuspidalisstenos eller saknade referenser.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 262,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av tricuspidalisstenos är utanför mätgränser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 263,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 0,
+        "Assessment Text": "Pulmonalis stenos: Ingen.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 265,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 21,
+        "Assessment Text": "Pulmonalisstenos: Lindrig.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 267,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 22,
+        "Assessment Text": "Pulmonalisstenos: Måttlig.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 269,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 23,
+        "Assessment Text": "Pulmonalisstenos: Uttalad.",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 271,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 900,
+        "Assessment Text": "Det saknas mätdata för bedömning av pulmonalisstenos eller saknade referenser.",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 272,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 800,
+        "Assessment Text": "Mätdata för bedömning av pulmonalisstenos är utanför mätgränser.",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 273,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 10,
+        "Assessment Text": "Undersökningsplats: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 274,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 20,
+        "Assessment Text": "Ålder: ",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 275,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 21,
+        "Assessment Text": "år",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 276,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 30,
+        "Assessment Text": "Blodtryck: ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 277,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 31,
+        "Assessment Text": "mmHg",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 278,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 40,
+        "Assessment Text": "Rytm: ",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 279,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 41,
+        "Assessment Text": "SR11",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 280,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 42,
+        "Assessment Text": "AF",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 281,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 43,
+        "Assessment Text": "PM",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 282,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 44,
+        "Assessment Text": "Annat",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 283,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 50,
+        "Assessment Text": "Hjärtfrekvens: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 284,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 51,
+        "Assessment Text": "BPM",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 285,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 60,
+        "Assessment Text": "Längd: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 286,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 61,
+        "Assessment Text": "cm",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 287,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 70,
+        "Assessment Text": "Vikt: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 288,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 71,
+        "Assessment Text": "kg",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 289,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 80,
+        "Assessment Text": "BSA: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 290,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 81,
+        "Assessment Text": "kg\/m2",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 291,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 90,
+        "Assessment Text": "Mitralisklaffprotes: ",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 292,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 91,
+        "Assessment Text": "Nej",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 293,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 92,
+        "Assessment Text": "Ja, mekanisk",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 294,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 93,
+        "Assessment Text": "Ja, bilogisk",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 295,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 94,
+        "Assessment Text": "Ja, plastik",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 296,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 100,
+        "Assessment Text": "Aortaklaffprotes: ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 297,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 101,
+        "Assessment Text": "Nej",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 298,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 102,
+        "Assessment Text": "Ja, mekanisk11",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 299,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 103,
+        "Assessment Text": "Ja, bilogisk22",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 300,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 104,
+        "Assessment Text": "Ja, plastik",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 301,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 110,
+        "Assessment Text": "Bildkvalitet: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 302,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 111,
+        "Assessment Text": "Ordinär",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 303,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 112,
+        "Assessment Text": "Nedsatt",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 304,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 120,
+        "Assessment Text": "Användning av kontrast: ",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 305,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 121,
+        "Assessment Text": "Nej",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 306,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 122,
+        "Assessment Text": "Ja, med Optison11",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 307,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 123,
+        "Assessment Text": "Ja, med Sonovue22",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 308,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 124,
+        "Assessment Text": "Ja, med annat",
+        "Last Modified When": "2017-03-12T10: 57: 16"
+    },
+    {
+        "Assessment Key": 309,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 130,
+        "Assessment Text": "Hemodynamiskshunt: ",
+        "Last Modified When": "2017-03-12T10: 57: 18"
+    },
+    {
+        "Assessment Key": 310,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 131,
+        "Assessment Text": "Nej",
+        "Last Modified When": "2017-02-22T21: 05: 01"
+    },
+    {
+        "Assessment Key": 311,
+        "Languages Key": 1,
+        "Assessment Call Function": 400,
+        "Assessment Level": 132,
+        "Assessment Text": "Ja",
+        "Last Modified When": "2017-02-19T13: 11: 38"
+    },
+    {
+        "Assessment Key": 383,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 117,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 06.5800000"
+    },
+    {
+        "Assessment Key": 384,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 118,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 06.9230000"
+    },
+    {
+        "Assessment Key": 385,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 119,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 06.9370000"
+    },
+    {
+        "Assessment Key": 386,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 120,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 07.2430000"
+    },
+    {
+        "Assessment Key": 387,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 121,
+        "Assessment Text": "Liten aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 07.5600000"
+    },
+    {
+        "Assessment Key": 388,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 122,
+        "Assessment Text": "Liten aortarot, dilaterad ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 07.9100000"
+    },
+    {
+        "Assessment Key": 389,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 123,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 07.9200000"
+    },
+    {
+        "Assessment Key": 390,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 124,
+        "Assessment Text": "Liten aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 08.2370000"
+    },
+    {
+        "Assessment Key": 391,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 125,
+        "Assessment Text": "Liten aortarot, dilaterad ascendens.\r\n",
+        "Last Modified When": "2017-10-20T16: 20: 08.6030000"
+    },
+    {
+        "Assessment Key": 392,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 126,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 09.2900000"
+    },
+    {
+        "Assessment Key": 393,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 127,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 09.3270000"
+    },
+    {
+        "Assessment Key": 394,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 128,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 09.6530000"
+    },
+    {
+        "Assessment Key": 395,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 129,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 09.6670000"
+    },
+    {
+        "Assessment Key": 396,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 130,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 09.6800000"
+    },
+    {
+        "Assessment Key": 397,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 131,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 09.9900000"
+    },
+    {
+        "Assessment Key": 398,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 132,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 20: 10.3430000"
+    },
+    {
+        "Assessment Key": 399,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 133,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 20: 10.6930000"
+    },
+    {
+        "Assessment Key": 400,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 134,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 03.7800000"
+    },
+    {
+        "Assessment Key": 401,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 135,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 16.5670000"
+    },
+    {
+        "Assessment Key": 402,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 136,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 17.0870000"
+    },
+    {
+        "Assessment Key": 403,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 137,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 17.1230000"
+    },
+    {
+        "Assessment Key": 404,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 138,
+        "Assessment Text": "Normalvid aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 17.4400000"
+    },
+    {
+        "Assessment Key": 405,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 139,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 17.7600000"
+    },
+    {
+        "Assessment Key": 406,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 140,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 17.7900000"
+    },
+    {
+        "Assessment Key": 407,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 141,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 18.1200000"
+    },
+    {
+        "Assessment Key": 408,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 142,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 18.4470000"
+    },
+    {
+        "Assessment Key": 409,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 143,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 18.4600000"
+    },
+    {
+        "Assessment Key": 410,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 144,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 18.7600000"
+    },
+    {
+        "Assessment Key": 411,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 145,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 19.0730000"
+    },
+    {
+        "Assessment Key": 412,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 146,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 19.3870000"
+    },
+    {
+        "Assessment Key": 380,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 114,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 19: 37.6200000"
+    },
+    {
+        "Assessment Key": 381,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 115,
+        "Assessment Text": "Liten aortarot och ascendens.\n",
+        "Last Modified When": "2017-10-20T16: 19: 39.3100000"
+    },
+    {
+        "Assessment Key": 382,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 116,
+        "Assessment Text": "Liten aortarot, dilaterad ascendens.",
+        "Last Modified When": "2017-10-20T16: 19: 39.7770000"
+    },
+    {
+        "Assessment Key": 556,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig TI.",
+        "Last Modified When": "2017-10-27T09: 26: 59.3200000"
+    },
+    {
+        "Assessment Key": 557,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig TI.",
+        "Last Modified When": "2017-10-27T09: 27: 00.7870000"
+    },
+    {
+        "Assessment Key": 558,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad TI.",
+        "Last Modified When": "2017-10-27T09: 27: 03.1330000"
+    },
+    {
+        "Assessment Key": 513,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 125,
+        "Assessment Text": "Svårbedömd MI.",
+        "Last Modified When": "2017-10-20T16: 39: 43.1130000"
+    },
+    {
+        "Assessment Key": 514,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig TI.",
+        "Last Modified When": "2017-10-20T16: 39: 43.1500000"
+    },
+    {
+        "Assessment Key": 515,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 122,
+        "Assessment Text": "Måttlig TI.",
+        "Last Modified When": "2017-10-20T16: 39: 43.5400000"
+    },
+    {
+        "Assessment Key": 516,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 123,
+        "Assessment Text": "Uttalad TI.",
+        "Last Modified When": "2017-10-20T16: 39: 43.9400000"
+    },
+    {
+        "Assessment Key": 517,
+        "Languages Key": 1,
+        "Assessment Call Function": 220,
+        "Assessment Level": 124,
+        "Assessment Text": "Svårbedömd TI.",
+        "Last Modified When": "2017-10-20T16: 39: 43.9500000"
+    },
+    {
+        "Assessment Key": 518,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig PI.",
+        "Last Modified When": "2017-10-20T16: 39: 44.3100000"
+    },
+    {
+        "Assessment Key": 519,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig PI.",
+        "Last Modified When": "2017-10-20T16: 39: 44.7030000"
+    },
+    {
+        "Assessment Key": 520,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad PI.",
+        "Last Modified When": "2017-10-20T16: 39: 45.1000000"
+    },
+    {
+        "Assessment Key": 521,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 123,
+        "Assessment Text": "Uttalad PI.\r\n",
+        "Last Modified When": "2017-10-20T16: 39: 45.5000000"
+    },
+    {
+        "Assessment Key": 522,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 124,
+        "Assessment Text": "Svårbedömd PI.",
+        "Last Modified When": "2017-10-20T16: 39: 45.9200000"
+    },
+    {
+        "Assessment Key": 523,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig PI.",
+        "Last Modified When": "2017-10-20T16: 39: 46.3270000"
+    },
+    {
+        "Assessment Key": 524,
+        "Languages Key": 1,
+        "Assessment Call Function": 230,
+        "Assessment Level": 122,
+        "Assessment Text": "Måttlig PI.",
+        "Last Modified When": "2017-10-20T16: 39: 46.7130000"
+    },
+    {
+        "Assessment Key": 525,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 122,
+        "Assessment Text": "Lindrig AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.1100000"
+    },
+    {
+        "Assessment Key": 526,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 123,
+        "Assessment Text": "Lindrig till måttlig AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.1270000"
+    },
+    {
+        "Assessment Key": 527,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 124,
+        "Assessment Text": "Måttlig AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.1400000"
+    },
+    {
+        "Assessment Key": 528,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 125,
+        "Assessment Text": "Måttlig till uttalad AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.1530000"
+    },
+    {
+        "Assessment Key": 529,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 126,
+        "Assessment Text": "Uttalad AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.1670000"
+    },
+    {
+        "Assessment Key": 530,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.5700000"
+    },
+    {
+        "Assessment Key": 531,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig AS.",
+        "Last Modified When": "2017-10-20T16: 39: 47.9530000"
+    },
+    {
+        "Assessment Key": 532,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad AS",
+        "Last Modified When": "2017-10-20T16: 39: 48.3430000"
+    },
+    {
+        "Assessment Key": 533,
+        "Languages Key": 1,
+        "Assessment Call Function": 300,
+        "Assessment Level": 127,
+        "Assessment Text": "Svårbedömd AS.",
+        "Last Modified When": "2017-10-20T16: 39: 48.7330000"
+    },
+    {
+        "Assessment Key": 534,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig MS.",
+        "Last Modified When": "2017-10-20T16: 39: 48.7470000"
+    },
+    {
+        "Assessment Key": 535,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig MS.",
+        "Last Modified When": "2017-10-20T16: 39: 48.7600000"
+    },
+    {
+        "Assessment Key": 536,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad MS.",
+        "Last Modified When": "2017-10-20T16: 39: 49.1300000"
+    },
+    {
+        "Assessment Key": 537,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig MS.",
+        "Last Modified When": "2017-10-20T16: 39: 49.4930000"
+    },
+    {
+        "Assessment Key": 538,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 122,
+        "Assessment Text": "Lindrig MS.",
+        "Last Modified When": "2017-10-20T16: 39: 49.8900000"
+    },
+    {
+        "Assessment Key": 539,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 123,
+        "Assessment Text": "Måttlig MS",
+        "Last Modified When": "2017-10-20T16: 39: 50.2900000"
+    },
+    {
+        "Assessment Key": 540,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 124,
+        "Assessment Text": "Uttalad MS.",
+        "Last Modified When": "2017-10-20T16: 39: 50.6700000"
+    },
+    {
+        "Assessment Key": 541,
+        "Languages Key": 1,
+        "Assessment Call Function": 310,
+        "Assessment Level": 125,
+        "Assessment Text": "Svårbedömd MS.",
+        "Last Modified When": "2017-10-20T16: 39: 51.0430000"
+    },
+    {
+        "Assessment Key": 542,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 121,
+        "Assessment Text": "Uttalad TS.",
+        "Last Modified When": "2017-10-20T16: 39: 51.4330000"
+    },
+    {
+        "Assessment Key": 543,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 122,
+        "Assessment Text": "Uttalad TS.",
+        "Last Modified When": "2017-10-20T16: 39: 51.4470000"
+    },
+    {
+        "Assessment Key": 544,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 123,
+        "Assessment Text": "Svårbedömd stenos TS.",
+        "Last Modified When": "2017-10-20T16: 39: 51.8300000"
+    },
+    {
+        "Assessment Key": 545,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig TS.",
+        "Last Modified When": "2017-10-20T16: 39: 51.8430000"
+    },
+    {
+        "Assessment Key": 546,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig TS",
+        "Last Modified When": "2017-10-20T16: 39: 52.2270000"
+    },
+    {
+        "Assessment Key": 547,
+        "Languages Key": 1,
+        "Assessment Call Function": 320,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad TS.",
+        "Last Modified When": "2017-10-20T16: 39: 52.6200000"
+    },
+    {
+        "Assessment Key": 548,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig PS.",
+        "Last Modified When": "2017-10-20T16: 39: 53.0100000"
+    },
+    {
+        "Assessment Key": 549,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 114,
+        "Assessment Text": "Måttlig PS.",
+        "Last Modified When": "2017-10-20T16: 39: 53.3900000"
+    },
+    {
+        "Assessment Key": 550,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad PS.",
+        "Last Modified When": "2017-10-20T16: 39: 53.4070000"
+    },
+    {
+        "Assessment Key": 551,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig PS.",
+        "Last Modified When": "2017-10-20T16: 39: 53.7870000"
+    },
+    {
+        "Assessment Key": 552,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 122,
+        "Assessment Text": "Måttlig PS.",
+        "Last Modified When": "2017-10-20T16: 39: 54.1530000"
+    },
+    {
+        "Assessment Key": 553,
+        "Languages Key": 1,
+        "Assessment Call Function": 330,
+        "Assessment Level": 123,
+        "Assessment Text": "Uttalad PS.",
+        "Last Modified When": "2017-10-20T16: 39: 54.1670000"
+    },
+    {
+        "Assessment Key": 562,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 48,
+        "Assessment Text": "Dilaterad.",
+        "Last Modified When": "2017-11-02T20: 28: 12.3870000"
+    },
+    {
+        "Assessment Key": 563,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 49,
+        "Assessment Text": "Dilaterad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 14.2270000"
+    },
+    {
+        "Assessment Key": 564,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 50,
+        "Assessment Text": "Dilaterad med lindrig excentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 15.8200000"
+    },
+    {
+        "Assessment Key": 565,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 51,
+        "Assessment Text": "Dilaterad med lindrig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 16.8870000"
+    },
+    {
+        "Assessment Key": 566,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 52,
+        "Assessment Text": "Dilaterad med måttlig excentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 31.8930000"
+    },
+    {
+        "Assessment Key": 567,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 53,
+        "Assessment Text": "Dilaterad med måttlig koncentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 33.3700000"
+    },
+    {
+        "Assessment Key": 568,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 54,
+        "Assessment Text": "Dilaterad med uttalad excentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 28: 36.4370000"
+    },
+    {
+        "Assessment Key": 569,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 55,
+        "Assessment Text": "Dilaterad med uttalad koncentrisk hypertrofi.",
+        "Last Modified When": "2017-11-02T20: 29: 28.0100000"
+    },
+    {
+        "Assessment Key": 570,
+        "Languages Key": 1,
+        "Assessment Call Function": 110,
+        "Assessment Level": 0,
+        "Assessment Text": "Ingen ökad mängd pericardvätska.",
+        "Last Modified When": "2018-01-12T14: 53: 53.0200000"
+    },
+    {
+        "Assessment Key": 413,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 147,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 19.6900000"
+    },
+    {
+        "Assessment Key": 414,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 148,
+        "Assessment Text": "Liten aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 19.7030000"
+    },
+    {
+        "Assessment Key": 415,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 149,
+        "Assessment Text": "Dilaterad aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 20.0330000"
+    },
+    {
+        "Assessment Key": 416,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 150,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 20.3600000"
+    },
+    {
+        "Assessment Key": 417,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 151,
+        "Assessment Text": "Liten aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 20.3700000"
+    },
+    {
+        "Assessment Key": 418,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 152,
+        "Assessment Text": "Liten aortarot, dilaterad ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 20.6530000"
+    },
+    {
+        "Assessment Key": 419,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 153,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 20.9900000"
+    },
+    {
+        "Assessment Key": 420,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 154,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 21.3170000"
+    },
+    {
+        "Assessment Key": 421,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 155,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 21.6170000"
+    },
+    {
+        "Assessment Key": 422,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 156,
+        "Assessment Text": "Normalvid aortarot, normalvid aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 21.9530000"
+    },
+    {
+        "Assessment Key": 423,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 157,
+        "Assessment Text": "Liten aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 22.2570000"
+    },
+    {
+        "Assessment Key": 424,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 158,
+        "Assessment Text": "Dilaterad aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 22.2700000"
+    },
+    {
+        "Assessment Key": 425,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 159,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 22.5800000"
+    },
+    {
+        "Assessment Key": 426,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 160,
+        "Assessment Text": "Liten aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 22.8970000"
+    },
+    {
+        "Assessment Key": 427,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 161,
+        "Assessment Text": "Liten aortarot, dilaterad ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 22.9100000"
+    },
+    {
+        "Assessment Key": 428,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 162,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 23.2100000"
+    },
+    {
+        "Assessment Key": 429,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 163,
+        "Assessment Text": "Dilaterad aortarot, liten ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 23.5100000"
+    },
+    {
+        "Assessment Key": 430,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 164,
+        "Assessment Text": "Dilaterad aortarot och ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 23.8570000"
+    },
+    {
+        "Assessment Key": 431,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 165,
+        "Assessment Text": "Normalvid aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 23.8700000"
+    },
+    {
+        "Assessment Key": 432,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 166,
+        "Assessment Text": "Liten aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 24.1700000"
+    },
+    {
+        "Assessment Key": 433,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 167,
+        "Assessment Text": "Dilaterad aorta ascendens.",
+        "Last Modified When": "2017-10-20T16: 21: 24.4930000"
+    },
+    {
+        "Assessment Key": 434,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 168,
+        "Assessment Text": "Normalvid aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 24.8070000"
+    },
+    {
+        "Assessment Key": 435,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 169,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 25.1030000"
+    },
+    {
+        "Assessment Key": 436,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 170,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 25.1170000"
+    },
+    {
+        "Assessment Key": 437,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 171,
+        "Last Modified When": "2017-10-20T16: 21: 25.4230000"
+    },
+    {
+        "Assessment Key": 438,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 172,
+        "Assessment Text": "Liten aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 25.7270000"
+    },
+    {
+        "Assessment Key": 439,
+        "Languages Key": 1,
+        "Assessment Call Function": 10,
+        "Assessment Level": 173,
+        "Assessment Text": "Dilaterad aortarot.",
+        "Last Modified When": "2017-10-20T16: 21: 26.6670000"
+    },
+    {
+        "Assessment Key": 440,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 111,
+        "Assessment Text": "Dil vä förmak.",
+        "Last Modified When": "2017-10-20T16: 21: 27"
+    },
+    {
+        "Assessment Key": 441,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 112,
+        "Assessment Text": "Dil vä förmak.",
+        "Last Modified When": "2017-10-20T16: 21: 27.4900000"
+    },
+    {
+        "Assessment Key": 442,
+        "Languages Key": 1,
+        "Assessment Call Function": 20,
+        "Assessment Level": 113,
+        "Assessment Text": "Dil vä förmak.",
+        "Last Modified When": "2017-10-20T16: 21: 28.7000000"
+    },
+    {
+        "Assessment Key": 443,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 111,
+        "Assessment Text": "Koncentrisk VK remodellering.",
+        "Last Modified When": "2017-10-20T16: 21: 31.8900000"
+    },
+    {
+        "Assessment Key": 444,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 112,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 01.5500000"
+    },
+    {
+        "Assessment Key": 445,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 113,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 01.9370000"
+    },
+    {
+        "Assessment Key": 446,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 114,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 02.3830000"
+    },
+    {
+        "Assessment Key": 447,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 115,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 02.3970000"
+    },
+    {
+        "Assessment Key": 448,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 116,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 02.7970000"
+    },
+    {
+        "Assessment Key": 449,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 117,
+        "Assessment Text": "VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 03.1770000"
+    },
+    {
+        "Assessment Key": 450,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 118,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 03.6000000"
+    },
+    {
+        "Assessment Key": 451,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 119,
+        "Assessment Text": "Dilaterad VK. Koncentrisk remodellering.",
+        "Last Modified When": "2017-10-20T16: 32: 03.6170000"
+    },
+    {
+        "Assessment Key": 452,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 120,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 03.9970000"
+    },
+    {
+        "Assessment Key": 453,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 121,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 04.3930000"
+    },
+    {
+        "Assessment Key": 454,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 122,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 04.4070000"
+    },
+    {
+        "Assessment Key": 455,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 123,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 04.4200000"
+    },
+    {
+        "Assessment Key": 456,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 124,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 04.4330000"
+    },
+    {
+        "Assessment Key": 457,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 125,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 04.8400000"
+    },
+    {
+        "Assessment Key": 458,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 126,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 05.2400000"
+    },
+    {
+        "Assessment Key": 459,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 127,
+        "Assessment Text": "Dilaterad VK. Koncentrisk remodellering.\n",
+        "Last Modified When": "2017-10-20T16: 32: 05.2500000"
+    },
+    {
+        "Assessment Key": 460,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 128,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 05.6270000"
+    },
+    {
+        "Assessment Key": 461,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 129,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 06.0200000"
+    },
+    {
+        "Assessment Key": 462,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 130,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 06.0600000"
+    },
+    {
+        "Assessment Key": 463,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 131,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 06.4570000"
+    },
+    {
+        "Assessment Key": 464,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 131,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 06.8230000"
+    },
+    {
+        "Assessment Key": 465,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 132,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 06.8670000"
+    },
+    {
+        "Assessment Key": 466,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 133,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 07.2670000"
+    },
+    {
+        "Assessment Key": 467,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 134,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 07.6670000"
+    },
+    {
+        "Assessment Key": 468,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 135,
+        "Assessment Text": "Dilaterad VK. Koncentrisk remodellering.",
+        "Last Modified When": "2017-10-20T16: 32: 07.6800000"
+    },
+    {
+        "Assessment Key": 469,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 136,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 08.0630000"
+    },
+    {
+        "Assessment Key": 470,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 137,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 08.4670000"
+    },
+    {
+        "Assessment Key": 471,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 138,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 08.8600000"
+    },
+    {
+        "Assessment Key": 472,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 139,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 08.8770000"
+    },
+    {
+        "Assessment Key": 473,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 140,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 09.2630000"
+    },
+    {
+        "Assessment Key": 474,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 141,
+        "Assessment Text": "Dilaterad VK. VK hypertrofi.",
+        "Last Modified When": "2017-10-20T16: 32: 09.3030000"
+    },
+    {
+        "Assessment Key": 475,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 142,
+        "Assessment Text": "Reserv",
+        "Last Modified When": "2017-10-20T16: 32: 09.6930000"
+    },
+    {
+        "Assessment Key": 476,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 143,
+        "Assessment Text": "Reserv",
+        "Last Modified When": "2017-10-20T16: 32: 10.0500000"
+    },
+    {
+        "Assessment Key": 477,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 144,
+        "Assessment Text": "Normalstor VK.",
+        "Last Modified When": "2017-10-20T16: 32: 10.0870000"
+    },
+    {
+        "Assessment Key": 478,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 145,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 10.4530000"
+    },
+    {
+        "Assessment Key": 479,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 146,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 10.8330000"
+    },
+    {
+        "Assessment Key": 480,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 147,
+        "Assessment Text": "Dilaterad VK.",
+        "Last Modified When": "2017-10-20T16: 32: 10.8500000"
+    },
+    {
+        "Assessment Key": 482,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 112,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-10-20T16: 32: 11.5970000"
+    },
+    {
+        "Assessment Key": 483,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 113,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-10-20T16: 32: 11.9600000"
+    },
+    {
+        "Assessment Key": 484,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 114,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-10-20T16: 32: 11.9730000"
+    },
+    {
+        "Assessment Key": 485,
+        "Languages Key": 1,
+        "Assessment Call Function": 40,
+        "Assessment Level": 115,
+        "Assessment Text": "Diastolisk dysfunktion.",
+        "Last Modified When": "2017-10-20T16: 32: 12.3600000"
+    },
+    {
+        "Assessment Key": 486,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 111,
+        "Assessment Text": "Nedsatt VK funktion.",
+        "Last Modified When": "2017-10-20T16: 32: 12.7270000"
+    },
+    {
+        "Assessment Key": 487,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 112,
+        "Assessment Text": "Nedsatt VK funktion.",
+        "Last Modified When": "2017-10-20T16: 32: 12.7400000"
+    },
+    {
+        "Assessment Key": 488,
+        "Languages Key": 1,
+        "Assessment Call Function": 50,
+        "Assessment Level": 113,
+        "Assessment Text": "Nedsatt VK funktion.",
+        "Last Modified When": "2017-10-20T16: 32: 13.1030000"
+    },
+    {
+        "Assessment Key": 489,
+        "Languages Key": 1,
+        "Assessment Call Function": 70,
+        "Assessment Level": 112,
+        "Assessment Text": "Dilaterad HK.",
+        "Last Modified When": "2017-10-20T16: 32: 13.4700000"
+    },
+    {
+        "Assessment Key": 490,
+        "Languages Key": 1,
+        "Assessment Call Function": 75,
+        "Assessment Level": 112,
+        "Assessment Text": "Nedsatt HK funktion.",
+        "Last Modified When": "2017-10-20T16: 32: 13.8500000"
+    },
+    {
+        "Assessment Key": 491,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 111,
+        "Assessment Text": "Regional hypokinesi enligt nedan.",
+        "Last Modified When": "2017-10-20T16: 32: 13.8630000"
+    },
+    {
+        "Assessment Key": 492,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 112,
+        "Assessment Text": "Regional hypokinesi enligt nedan.",
+        "Last Modified When": "2017-10-20T16: 32: 14.2200000"
+    },
+    {
+        "Assessment Key": 493,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 113,
+        "Assessment Text": "Regional hypokinesi enligt nedan.",
+        "Last Modified When": "2017-10-20T16: 32: 14.5930000"
+    },
+    {
+        "Assessment Key": 494,
+        "Languages Key": 1,
+        "Assessment Call Function": 80,
+        "Assessment Level": 114,
+        "Assessment Text": "Regional hypokinesi enligt nedan.",
+        "Last Modified When": "2017-10-20T16: 32: 14.6070000"
+    },
+    {
+        "Assessment Key": 495,
+        "Languages Key": 1,
+        "Assessment Call Function": 90,
+        "Assessment Level": 111,
+        "Assessment Text": "Ökat PA tryck",
+        "Last Modified When": "2017-10-20T16: 32: 14.9800000"
+    },
+    {
+        "Assessment Key": 496,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig AI.",
+        "Last Modified When": "2017-10-20T16: 32: 15.3800000"
+    },
+    {
+        "Assessment Key": 497,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad AI.",
+        "Last Modified When": "2017-10-20T16: 32: 15.7800000"
+    },
+    {
+        "Assessment Key": 498,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 113,
+        "Assessment Text": "Lindrig till måttlig AI.",
+        "Last Modified When": "2017-10-20T16: 32: 16.1730000"
+    },
+    {
+        "Assessment Key": 499,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 115,
+        "Assessment Text": "Måttlig till uttalad AI.",
+        "Last Modified When": "2017-10-20T16: 32: 16.1870000"
+    },
+    {
+        "Assessment Key": 500,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig AI.",
+        "Last Modified When": "2017-10-20T16: 32: 16.5570000"
+    },
+    {
+        "Assessment Key": 501,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 122,
+        "Assessment Text": "Lindrig till måttlig AI.",
+        "Last Modified When": "2017-10-20T16: 32: 16.5700000"
+    },
+    {
+        "Assessment Key": 502,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 123,
+        "Assessment Text": "Måttlig till uttalad AI",
+        "Last Modified When": "2017-10-20T16: 32: 16.9630000"
+    },
+    {
+        "Assessment Key": 503,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 124,
+        "Assessment Text": "Uttalad AI.",
+        "Last Modified When": "2017-10-20T16: 32: 17.3400000"
+    },
+    {
+        "Assessment Key": 504,
+        "Languages Key": 1,
+        "Assessment Call Function": 200,
+        "Assessment Level": 123,
+        "Assessment Text": "Svårbedömd AI.",
+        "Last Modified When": "2017-10-20T16: 32: 17.7000000"
+    },
+    {
+        "Assessment Key": 505,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 121,
+        "Assessment Text": "Lindrig MI.",
+        "Last Modified When": "2017-10-20T16: 32: 17.7100000"
+    },
+    {
+        "Assessment Key": 506,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 122,
+        "Assessment Text": "Lindrig till måttlig MI.",
+        "Last Modified When": "2017-10-20T16: 32: 18.0970000"
+    },
+    {
+        "Assessment Key": 507,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 112,
+        "Assessment Text": "Lindrig MI.",
+        "Last Modified When": "2017-10-20T16: 32: 18.4670000"
+    },
+    {
+        "Assessment Key": 508,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 113,
+        "Assessment Text": "Lindrig till måttlig MI.",
+        "Last Modified When": "2017-10-20T16: 32: 18.5000000"
+    },
+    {
+        "Assessment Key": 509,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 115,
+        "Assessment Text": "Måttlig till uttalad MI.",
+        "Last Modified When": "2017-10-20T16: 32: 18.8530000"
+    },
+    {
+        "Assessment Key": 510,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 116,
+        "Assessment Text": "Uttalad MI.",
+        "Last Modified When": "2017-10-20T16: 32: 19.2300000"
+    },
+    {
+        "Assessment Key": 511,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 123,
+        "Assessment Text": "Måttlig till uttalad MI.",
+        "Last Modified When": "2017-10-20T16: 32: 19.6000000"
+    },
+    {
+        "Assessment Key": 512,
+        "Languages Key": 1,
+        "Assessment Call Function": 210,
+        "Assessment Level": 124,
+        "Assessment Text": "Uttalad MI.",
+        "Last Modified When": "2017-10-20T16: 32: 20.0100000"
+    },
+    {
+        "Assessment Key": 561,
+        "Languages Key": 1,
+        "Assessment Call Function": 30,
+        "Assessment Level": 44,
+        "Assessment Text": "Normalstor.",
+        "Last Modified When": "2017-11-02T18: 14: 31.9030000"
+    }
+]
