@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { parameterNamesRequest } from "features/statistics/services";
 import { useSelector } from "react-redux";
 import { parameterValuesRequest, xSelectorsRequest } from "../services";
 
@@ -8,6 +9,7 @@ const useParameter = () => {
   const [xAxisSelected, setXAxisSelected] = useState(undefined);
 
   useEffect(() => {
+    parameterNamesRequest();
     xSelectorsRequest();
   }, []);
 

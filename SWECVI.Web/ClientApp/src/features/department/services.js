@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import { store } from "stores";
-import { departmentsSuccess, failed, requested } from "stores/reducers/department.reducer";
+import { departmentsSuccess, failed, requested, succeed } from "stores/reducers/department.reducer";
 import API from "./api";
 
 export const getDepartmentRequest = async (params) => {
@@ -12,5 +13,19 @@ export const getDepartmentRequest = async (params) => {
     }
   } catch (error) {
     dispatch(failed(error));
+  }
+};
+
+export const deleteDepartmentRequest = async (id, callback) => {
+  const { dispatch } = store;
+  try {
+    dispatch(requested());
+    await API.deleteDepartment(id);
+    dispatch(succeed("Department deleted successfully"));
+    if (callback) {
+      callback();
+    }
+  } catch (error) {
+    dispatch(failed(error?.response?.data));
   }
 };

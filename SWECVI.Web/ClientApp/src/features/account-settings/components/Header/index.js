@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
+import MDButton from "components/MDButton";
 import karolinska from "assets/images/karolinska-institutet.png";
 import { LOGOUT } from "constants/actionTypes";
 import { useDispatch } from "react-redux";
@@ -39,14 +40,14 @@ function Header() {
               alignItems="center"
               lineHeight={1}
             >
-              <MDTypography
-                variant="button"
-                fontWeight="medium"
-                color="error"
+              <MDButton
                 onClick={handleLogout}
+                variant="gradient"
+                color="error"
+                sx={{ marginRight: 1 }}
               >
                 Logout
-              </MDTypography>
+              </MDButton>
             </MDBox>
           </Grid>
         </Grid>

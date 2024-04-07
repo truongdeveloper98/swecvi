@@ -58,16 +58,32 @@ namespace SWECVI.Infrastructure.Services
                 }
 
                 // create new instance studyFinding type of StudyFinding Entity
-                var studyFinding = new StudyFinding()
+                var studyFinding = _studyFindingRepository.FirstOrDefault(x => x.StudyId == model.StudyId
+                                                                           && x.FindingStructureId == findingItem.Id);
+                // if study finding is null, write log
+                if (studyFinding is null)
                 {
-                    StudyId = model.StudyId,
-                    CreatedAt = DateTime.Now,
-                    FindingStructureId = findingItem.Id,
-                    IsDeleted = false,
-                    SelectOptions = findingItem.Value
-                };
+                    var finding = new StudyFinding()
+                    {
+                        StudyId = model.StudyId,
+                        CreatedAt = DateTime.Now,
+                        FindingStructureId = findingItem.Id,
+                        IsDeleted = false,
+                        SelectOptions = findingItem.Value
+                    };
 
-                await _studyFindingRepository.Add(studyFinding);
+                    await _studyFindingRepository.Add(finding);
+                    continue;
+                }
+
+                // update data if studyFing exists
+
+                studyFinding.StudyId = model.StudyId;
+                studyFinding.UpdatedAt = DateTime.Now;
+                studyFinding.FindingStructureId = findingItem.Id;
+                studyFinding.SelectOptions = findingItem.Value;
+
+                await _studyFindingRepository.Update(studyFinding);
 
             }
 

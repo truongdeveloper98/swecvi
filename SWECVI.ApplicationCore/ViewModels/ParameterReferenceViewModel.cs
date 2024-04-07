@@ -23,6 +23,7 @@ namespace SWECVI.ApplicationCore.ViewModels
         public double? ModeratelyAbnormalRangeUpper { get; set; }
         public double? SeverelyAbnormalRangeMoreThan { get; set; }
         public double? SeverelyAbnormalRangeLessThan { get; set; }
-        public virtual Gender? Gender { get; set; }
+        public string GenderName { get; set; }
+        public Gender? Gender { get; set; }
     }
 }

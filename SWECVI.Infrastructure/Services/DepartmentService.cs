@@ -120,5 +120,19 @@ namespace SWECVI.Infrastructure.Services
 
             return true;
         }
+
+        public async Task<bool> DeleteDepartment(int id)
+        {
+            var department = await _departmentRepository.Get(id);
+
+            if(department is null)
+            {
+                throw new Exception($"Department dont exists with id {id}");
+            }
+
+            await _departmentRepository.Delete(department); 
+
+            return true;
+        }
     }
 }

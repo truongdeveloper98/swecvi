@@ -42,7 +42,7 @@ function ParametersTable({ filter }) {
     <MDBox height="30vh" className={darkMode ? "ag-theme-alpine-dark" : "ag-theme-alpine"}>
       <MDBox display="flex" alignItems="center" mb={0.5}>
         <PageSize
-          pageSize={500}
+          pageSize={pageSize}
           onChange={(event, value) => {
             setEntriesPerPage(value);
           }}

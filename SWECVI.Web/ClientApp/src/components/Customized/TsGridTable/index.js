@@ -28,8 +28,10 @@ import MDButton from "components/MDButton";
 import Pagination from "components/Customized/Pagination";
 import SearchInput from "components/Customized/SearchInput";
 import { useTranslation } from "react-i18next";
+import DeleteButton from "components/Customized/DeleteButton";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useMaterialUIController } from "context";
 import usePaging from "./hooks/usePaging";
 import PageSize from "../PageSize";
 import SubTsGridTable from "../../../features/patients/SubComponent";
@@ -41,15 +43,18 @@ const TsGridTable = forwardRef(
       columns,
       onFetching,
       onCreate,
-
+      onDelete,
+      columnHides,
       entityName,
       subColumns,
       isExpand,
     },
     ref
   ) => {
+    const [controller] = useMaterialUIController();
+    const { darkMode } = controller;
     const [expanded, setExpanded] = useState({});
-    const [columnVisibility, setColumnVisibility] = useState({});
+    const [columnVisibility, setColumnVisibility] = useState({ columnHides });
     const [sorting, setSorting] = useState([]);
     const [columnOrder, setColumnOrder] = useState(columns.map((column) => column.id));
     const pageSize = useSelector((state) => state.common.pageSize);
@@ -152,7 +157,11 @@ const TsGridTable = forwardRef(
                             sx={{ cursor: "pointer" }}
                             onClick={header.column.getToggleSortingHandler()}
                           >
-                            <Typography variant="body2" fontWeight="bold" color="#181d1f">
+                            <Typography
+                              variant="body2"
+                              fontWeight="bold"
+                              color={darkMode ? "#FFF" : "#181d1f"}
+                            >
                               {flexRender(header.column.columnDef.header, header.getContext())}
                               {{
                                 asc: " 🔼",
@@ -169,7 +178,7 @@ const TsGridTable = forwardRef(
               <TableBody>
                 {entity.items.length > 0 ? (
                   <>
-                    {gridTable.getRowModel().rows.map((row) => (
+                    {gridTable.getCoreRowModel().rows.map((row) => (
                       <>
                         <TableRow key={row.id} onClick={row.getToggleExpandedHandler()}>
                           {row.getVisibleCells().map((cell, index) => (
@@ -178,6 +187,7 @@ const TsGridTable = forwardRef(
                               sx={{
                                 borderTop: "1px solid #dde2eb",
                                 borderBottom: "1px solid #dde2eb",
+                                color: darkMode ? "#FFF" : "#242424",
                               }}
                             >
                               {index === 0 ? (
@@ -228,6 +238,16 @@ const TsGridTable = forwardRef(
                               )}
                             </TableCell>
                           ))}
+                          <TableCell>
+                            {onDelete && (
+                              <Box>
+                                <DeleteButton
+                                  onClick={() => onDelete(row.original.id, fetchData)}
+                                  confirmTitle={`Are you sure you want to delete this "Department"?`}
+                                />
+                              </Box>
+                            )}
+                          </TableCell>
                         </TableRow>
                         {subColumns && row.getIsExpanded() && (
                           <TableRow>

@@ -5,6 +5,7 @@ import TsGridTable from "components/Customized/TsGridTable";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Button } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 import { useSelector } from "react-redux";
 import useAssessment from "./hooks/useAssessment";
 import { getAssessmentRequest } from "./services";
@@ -42,7 +43,9 @@ export default function Assessment() {
       header: () => null,
       cell: ({ row }) => (
         <Box style={{ textAlign: "right" }}>
-          <Button onClick={() => handleAssessment(row.original.id)}>Edit</Button>
+          <Button onClick={() => handleAssessment(row.original.id)}>
+            <EditIcon />
+          </Button>
         </Box>
       ),
     }),

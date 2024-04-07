@@ -6,6 +6,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Button } from "@mui/material";
 import { useSelector } from "react-redux";
+import EditIcon from "@mui/icons-material/Edit";
 import useReferences from "./hooks/useReferences";
 import { getReferencesRequest } from "./services";
 
@@ -69,8 +70,8 @@ export default function References() {
       id: "severelyAbnormalRangeLessThan",
       header: "Severely Upper",
     }),
-    columnHelper.accessor("gender", {
-      id: "gender",
+    columnHelper.accessor("genderName", {
+      id: "genderName",
       header: "Gender",
     }),
     columnHelper.accessor("", {
@@ -78,7 +79,9 @@ export default function References() {
       header: () => null,
       cell: ({ row }) => (
         <Box style={{ textAlign: "right" }}>
-          <Button onClick={() => handleEditReferences(row.original.id)}>Edit</Button>
+          <Button onClick={() => handleEditReferences(row.original.id)}>
+            <EditIcon />
+          </Button>
         </Box>
       ),
     }),

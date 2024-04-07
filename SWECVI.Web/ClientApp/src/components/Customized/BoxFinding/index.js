@@ -30,7 +30,7 @@ export default function BoxFinding({ boxHeader, inputPatientFinding, tabName }) 
       {inputPatientFinding && inputPatientFinding.length > 0 && tabName !== undefined ? (
         <Grid container>
           <Grid item xs={12}>
-            <Typography>{boxHeader}</Typography>
+            <Typography sx={{ fontWeight: "Bold" }}>{boxHeader}</Typography>
           </Grid>
           {inputPatientFinding.map((item) => (
             <Grid

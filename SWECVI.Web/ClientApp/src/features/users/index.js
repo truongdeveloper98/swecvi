@@ -8,6 +8,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 import TsGridTable from "components/Customized/TsGridTable";
 import { t } from "i18next";
 import { Button, Checkbox } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 import useUsers from "./hooks/useUsers";
 import { getUsersRequest } from "./services";
 
@@ -74,6 +75,16 @@ function Users() {
       header: "Email",
       enableSorting: false,
     }),
+    columnHelper.accessor("role", {
+      id: "role",
+      header: "Role",
+      enableSorting: false,
+    }),
+    columnHelper.accessor("department", {
+      id: "department",
+      header: "Department",
+      enableSorting: false,
+    }),
     columnHelper.accessor("isActive", {
       id: "isActive",
       header: t("Active"),
@@ -87,7 +98,11 @@ function Users() {
     columnHelper.accessor("", {
       id: "action",
       header: () => null,
-      cell: ({ row }) => <Button onClick={() => handleEditUser(row.original.id)}>Edit</Button>,
+      cell: ({ row }) => (
+        <Button onClick={() => handleEditUser(row.original.id)}>
+          <EditIcon />
+        </Button>
+      ),
     }),
   ];
 

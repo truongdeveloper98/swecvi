@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import BaseLayout from "components/Customized/BaseLayout";
 import EditButton from "components/Customized/EditButton";
 // import { defaultColDef } from "constants/table";
-// import AgGridTable from "components/Customized/AgGridTable";
 import PeriodFiltersCard from "components/Customized/PeriodFilter";
 import SyncIcon from "@mui/icons-material/Sync";
 import MDButton from "components/MDButton";
@@ -49,7 +48,7 @@ function Patients() {
     handleOpenExamDetail,
     handleForceSyncPatients,
     isExport,
-    setIsExport,
+    // setIsExport,
     handleSave,
     // paging
   } = usePatients();
@@ -57,13 +56,10 @@ function Patients() {
   const { t } = useTranslation();
 
   const columns = [
-    columnHelper.accessor("hospitalId", {
-      id: "hospitalId",
-      header: "Hospital",
-    }),
     columnHelper.accessor("patientId", {
       id: "patientId",
       header: "Patient ID",
+      enableHiding: false,
     }),
     columnHelper.accessor("patientName", {
       id: "patientName",
@@ -88,10 +84,6 @@ function Patients() {
   ];
 
   const subColumns = [
-    columnHelper.accessor("hospitalId", {
-      id: "hospitalId",
-      header: "Hospital",
-    }),
     columnHelper.accessor("id", {
       id: "id",
       header: "Exam ID",
@@ -104,13 +96,9 @@ function Patients() {
       id: "time",
       header: "Exam Time",
     }),
-    columnHelper.accessor("department", {
-      id: "department",
-      header: "Department",
-    }),
-    columnHelper.accessor("reportType", {
-      id: "reportType",
-      header: "Report Type",
+    columnHelper.accessor("studyType", {
+      id: "studyType",
+      header: "Study Type",
     }),
     columnHelper.accessor("accessionNumber", {
       id: "accessionNumber",
@@ -172,7 +160,7 @@ function Patients() {
           >
             {t("ForceSync")}
           </MDButton>
-          <MDButton
+          {/* <MDButton
             color="info"
             startIcon={!isLoading && <SyncIcon />}
             onClick={() => setIsExport(!isExport)}
@@ -180,7 +168,7 @@ function Patients() {
             disabled={isLoading}
           >
             {t("Export")}
-          </MDButton>
+          </MDButton> */}
         </Grid>
         {isExport && (
           <Grid item xs={12}>

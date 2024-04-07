@@ -56,9 +56,7 @@ namespace SWECVI.ApplicationCore.DomainServices
             }
 
             AppUser appUser = userInformationDto.MapToAppUser();
-            var pwd = new Password();
-            var password = pwd.Next();
-            var result = await _userManager.CreateAsync(appUser, password);
+            var result = await _userManager.CreateAsync(appUser, userInformationDto.Password);
             if (result.Succeeded)
             {
                 await _userManager.AddToRolesAsync(appUser, userInformationDto.Roles);
@@ -212,7 +210,9 @@ namespace SWECVI.ApplicationCore.DomainServices
                 LastName = user.LastName,
                 IsActive = user.IsActive,
                 Email = user.Identity.Email,
-                PhoneNumber = user.Identity.PhoneNumber
+                PhoneNumber = user.Identity.PhoneNumber,
+                IndexDepartment = user.IndexDepartment,
+                AppUser = user.Identity
             };
 
 
@@ -223,10 +223,16 @@ namespace SWECVI.ApplicationCore.DomainServices
                     selector: selectorExpression,
                     filter,
                     orderBy: m => PredicateBuilder.ApplyOrder(m, sortColumnName, sortColumnDirection),
-                    "",
+                    "Identity",
                     pageSize,
                     page: currentPage
                 );
+
+            foreach(var item in items)
+            {
+                item.Role = string.Join(',', await _userManager.GetRolesAsync(item.AppUser));
+                item.Department = item.IndexDepartment == null ? string.Empty : await _departmentRepository.Get(item.IndexDepartment.Value) == null ? string.Empty : (await _departmentRepository.Get(item.IndexDepartment.Value)).Name;
+            }
 
             return new PagedResponseDto<UserInformationDto>()
             {

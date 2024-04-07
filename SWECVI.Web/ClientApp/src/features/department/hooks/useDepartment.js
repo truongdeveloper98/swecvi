@@ -1,6 +1,7 @@
 import PAGES from "navigation/pages";
-import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { deleteDepartmentRequest } from "../services";
 
 const useDepartment = () => {
   const navigate = useNavigate();
@@ -14,7 +15,12 @@ const useDepartment = () => {
     navigate(`${PAGES.editDepartment}/${id}`);
   };
 
-  return { agRef, onCreateDepartment, handleEditDepartment };
+  const handleDeleteDepartment = (id, cb) => {
+    if (!id) return;
+    deleteDepartmentRequest(id, cb);
+  };
+
+  return { agRef, onCreateDepartment, handleEditDepartment, handleDeleteDepartment };
 };
 
 export default useDepartment;

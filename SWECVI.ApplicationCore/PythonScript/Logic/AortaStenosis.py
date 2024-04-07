@@ -59,8 +59,43 @@ def AortaStenosis(Parameters, References):
                       dCodeResult.DCode = 900
                       return dCodeResult
                  else:
-                       AVVmax = (AVVmax + AVVmaxP)/2
+                       AVVmax = AVVmaxP
+                       if(AVAVTI == None or AVMeanPG == None):
+                            dCodeResult.DCode = 900
+                            return dCodeResult
+                       else:
+                               if(AVVmax < AVVmaxReference['NormalRangeLower'] and
+                                  AVMeanPG < AVMeanPGReference['NormalRangeUpper'] and
+                                  AVAVTI > AVAVTIReference['NormalRangeLower']):
+                                        dCodeResult.DCode = 0
+                                        return dCodeResult
+                               elif(AVVmax >= AVVmaxReference['NormalRangeLower'] and
+                                    AVVmax <= AVVmaxReference['NormalRangeUpper'] and
+                                    AVMeanPG < AVMeanPGReference['NormalRangeUpper'] and
+                                    AVAVTI > AVAVTIReference['NormalRangeLower']):
+                                        dCodeResult.DCode = 12
+                                        return dCodeResult
+                               elif(AVVmax >= AVVmaxReference['NormalRangeUpper'] and
+                                    AVVmax <= AVVmaxReference['MildlyAbnormalRangeLower'] and
+                                    AVMeanPG >= AVMeanPGReference['NormalRangeLower'] and
+                                    AVMeanPG <= AVMeanPGReference['NormalRangeUpper'] and
+                                    AVAVTI > AVAVTIReference['NormalRangeLower'] and
+                                    AVAVTI <= AVAVTIReference['NormalRangeUpper']):
+                                        dCodeResult.DCode = 14
+                                        return dCodeResult
+                               elif(AVVmax > AVVmaxReference['MildlyAbnormalRangeLower'] and
+                                    AVMeanPG > AVMeanPGReference['NormalRangeUpper'] and
+                                    AVAVTI < AVAVTIReference['NormalRangeUpper']):
+                                        dCodeResult.DCode = 16
+                                        return dCodeResult
+                               else:
+                                      dCodeResult.DCode = 800
+                                      return dCodeResult
           else:
+                 if(AVVmaxP == None):
+                      dCodeResult.DCode = 900
+                      return dCodeResult
+
                  AVVmax = (AVVmax + AVVmaxP)/2
                  if(AVAVTI == None or AVMeanPG == None):
                       dCodeResult.DCode = 900

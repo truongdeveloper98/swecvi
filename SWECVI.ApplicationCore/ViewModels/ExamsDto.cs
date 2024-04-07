@@ -51,6 +51,10 @@ namespace SWECVI.ApplicationCore.ViewModels
             public IEnumerable<ExamsDto.Measurement> Measurements { get; set; }
             public string? AssessmentText { get; set; }
             public string? StressText { get; set; }
+            public string SSN { get; set; }
+            public string ExamDate { get; set; }
+            public string PatientName { get; set; }
+            public string? StudyType { get; set; }
         }
 
         public class Measurement

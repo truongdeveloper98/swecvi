@@ -38,6 +38,7 @@ namespace SWECVI.ApplicationCore.Mapper
                 Email = user.Identity.Email,
                 PhoneNumber = user.Identity.PhoneNumber,
                 IsActive = user.IsActive,
+                IndexDepartment = user.IndexDepartment,
             };
             return userInformation;
         }

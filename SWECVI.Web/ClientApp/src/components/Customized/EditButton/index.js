@@ -1,12 +1,12 @@
 import React from "react";
+import EditIcon from "@mui/icons-material/Edit";
 import CellButton from "components/Customized/CellButton";
 
-function EditButton({ icon, data, onClick }) {
+function EditButton({ data, onClick }) {
   return (
     <CellButton
-      icon={icon}
+      title={<EditIcon />}
       color="info"
-      title="Edit"
       onClick={() => {
         onClick(data);
       }}

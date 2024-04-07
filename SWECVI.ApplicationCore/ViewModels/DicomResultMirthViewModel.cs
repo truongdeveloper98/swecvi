@@ -28,6 +28,8 @@ namespace SWECVI.ApplicationCore.ViewModels
         public string Manufacture { get; set; } = default!;
         public string ManufactureName { get; set; } = default!;
         public string ModalitiesInStudy { get; set; } = default!;
+        public string Tag60051010 { get; set; } = default!;
+        public string Tag60051030 { get; set; } = default!;
         public List<MirthParameter> Parameters { get; set; } = default!;
 
     }

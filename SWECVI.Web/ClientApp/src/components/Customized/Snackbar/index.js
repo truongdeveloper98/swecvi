@@ -9,6 +9,7 @@ import { reinitialize as settingsReinitialize } from "stores/reducers/settings.r
 import { reinitialize as patientReinitialize } from "stores/reducers/patient.reducer";
 import { reinitialize as sessionReinitialize } from "stores/reducers/session.reducer";
 import { reinitialize as authReinitialize } from "stores/reducers/auth.reducer";
+import { reinitialize as findingReinitialize } from "stores/reducers/finding.reducer";
 import { reinitialize as pythonReinitialize } from "stores/reducers/python.reducer";
 
 export default function Snackbar() {
@@ -25,7 +26,8 @@ export default function Snackbar() {
       state.auth.error ||
       state.patient.error ||
       state.session.error ||
-      state.python.error
+      state.python.error ||
+      state.findings.error
   );
   const success = useSelector(
     (state) =>
@@ -38,7 +40,8 @@ export default function Snackbar() {
       state.auth.success ||
       state.patient.success ||
       state.session.success ||
-      state.python.success
+      state.python.success ||
+      state.findings.success
   );
 
   const errorSnackbar = () => (
@@ -58,6 +61,7 @@ export default function Snackbar() {
         dispatch(patientReinitialize());
         dispatch(sessionReinitialize());
         dispatch(authReinitialize());
+        dispatch(findingReinitialize());
         dispatch(pythonReinitialize());
       }}
     />
@@ -80,6 +84,7 @@ export default function Snackbar() {
         dispatch(patientReinitialize());
         dispatch(sessionReinitialize());
         dispatch(authReinitialize());
+        dispatch(findingReinitialize());
         dispatch(pythonReinitialize());
       }}
     />

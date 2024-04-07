@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { store } from "stores";
 import {
   examDetailRequest,
@@ -54,6 +55,7 @@ export const getExamRequest = async (id) => {
   try {
     dispatch(examDetailRequest());
     const response = await API.exam(id);
+    console.log(response);
     dispatch(examDetailSuccess(response.data));
   } catch (error) {
     dispatch(failed(error?.response?.data));

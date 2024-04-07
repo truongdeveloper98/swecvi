@@ -75,7 +75,7 @@ namespace SWECVI.ApplicationCore
                 StringBuilder generalData = new StringBuilder();
                 generalData.Append($"Patient: {study.PatientViewModel.PatientName} {study.PatientViewModel.PatientId} \n");
                 generalData.Append($"Exam date: {study.StudyDateTime.ToString("yyyy-MM-dd hh:mm")} \n");
-                generalData.Append($"Exam type: {study.InstitutionName} \n");
+                generalData.Append($"Exam type: {study.StudyDescription} \n");
                 generalData.Append($"Department: Heart Clinic \n");
                 generalData.Append($"Signed by: Doctor1  2023-01-01 13:54\n \n");
 

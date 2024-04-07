@@ -9,12 +9,13 @@ namespace SWECVI.ApplicationCore.ViewModels.MirthConnect
     public class PatientStudyViewModel
     {
             public int Id { get; set; }
-            public string DicomStudyId { get; set; }
+            public string StudyType { get; set; }
             public string? Date { get; set; }
             public string? Time { get; set; }
             public double? Height { get; set; }
             public double? Weight { get; set; }
             public int PatientId { get; set; }
+            public string AccessionNumber { get; set; }
     }
 
     public class StudyReport

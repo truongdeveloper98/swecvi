@@ -15,6 +15,7 @@ using SWECVI.ApplicationCore.Utilities;
 using SWECVI.ApplicationCore.ViewModels.Hospital;
 using System.Linq.Expressions;
 using static SWECVI.ApplicationCore.Enum;
+using NPOI.SS.Formula.Functions;
 
 namespace SWECVI.Infrastructure.Services
 {
@@ -23,6 +24,7 @@ namespace SWECVI.Infrastructure.Services
         private readonly IParameterService _parameterService;
         private readonly IStudyRepository _studyRepository;
         private readonly IStudyFindingRepository _studyFindingRepository;
+        private readonly IFindingStructureRepository _findingStructureRepository;
         private readonly ILogger<StudyService> _logger;
         private readonly ICacheService _cacheService;
         private readonly IParameterReferenceRepository _parameterReferenceRepository;
@@ -34,6 +36,7 @@ namespace SWECVI.Infrastructure.Services
                 IStudyFindingRepository studyFindingRepository,
                 IParameterReferenceRepository parameterReferenceRepository,
                 ICacheService cacheService,
+                IFindingStructureRepository findingStructureRepository,
                 IAssessmentRepository assessmentRepository
             )
         {
@@ -44,6 +47,7 @@ namespace SWECVI.Infrastructure.Services
             _cacheService = cacheService;
             _studyFindingRepository = studyFindingRepository;
             _assessmentRepository = assessmentRepository;
+            _findingStructureRepository = findingStructureRepository;
         }
 
         public Task<bool> Create(HospitalStudyViewModel model)
@@ -74,13 +78,13 @@ namespace SWECVI.Infrastructure.Services
             studyVM.AccessionNumber = study.AccessionNumber;
             studyVM.Height = study.Height;
             studyVM.Weight = study.Weight;
-            studyVM.InstitutionName = study.InstitutionName;
+            studyVM.StudyDescription = study.StudyDescription;
             studyVM.StudyDateTime = study.StudyDateTime;
             studyVM.PatientViewModel = new PatientViewModel
             {
                 PatientId = patient.PatientId,
                 DOB = patient.DOB.ToString(),
-                PatientName = patient.FirstName + " " + patient.LastName,
+                PatientName = patient.FirstName,
                 Sex = patient.Sex
             };
             var gender = GenderExtension.ConvertFromString(studyVM.PatientViewModel.Sex == "O" ? "M" : studyVM.PatientViewModel.Sex);
@@ -156,30 +160,13 @@ namespace SWECVI.Infrastructure.Services
                                          })
                                           .ToList();
 
-            List<string> parametersWithIndex = new List<string>() 
-            {
-                "LAESV",
-                "LAAs",
-                "LADs",
-                "AOStjunct",
-                "AOsinus",
-                "AOascendens",
-                "AVD",
-                "LVEDV",
-                "LVMass",
-                "LVIDd",
-                "LVIDs",
-                "LVESV",
-                "RAESV",
-                "RVAd",
-                "RVAs"
-            };
+           
 
             var parameterWithIndexs = new List<ExamsDto.Measurement>();
 
             foreach (var measurement in measurements)
             {
-                if (parametersWithIndex.Contains(measurement.Name))
+                if (ParameterIndexName.parametersWithIndex.Contains(measurement.Name))
                 {
                     parameterWithIndexs.Add(new ExamsDto.Measurement()
                     {
@@ -249,25 +236,25 @@ namespace SWECVI.Infrastructure.Services
                             {
                                 if ((bool)param.IsOutsideReferenceRange)
                                 {
-                                    paramTextTemp += param.Name + ": " + param.Value + "* " + param.Unit + " (" + param.Reference + ");";
+                                    paramTextTemp += param.Name + ": " + param.Value + "* " + param.Unit + " (" + param.Reference + ")";
                                 }
                                 else
                                 {
-                                    paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit + " (" + param.Reference + ");";
+                                    paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit + " (" + param.Reference + ")";
                                 }
                             }
                             else
                             {
-                                paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit + " (" + param.Reference + ");";
+                                paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit + " (" + param.Reference + ")";
                             }
                         }
                         else
                         {
-                            paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit + ";";
+                            paramTextTemp += param.Name + ": " + param.Value + " " + param.Unit;
                         }
 
                     }
-                    parameterText += paramTextTemp.Substring(0, paramTextTemp.Length - 1);
+                    parameterText += paramTextTemp;
                     parameterText += "\n";
                 }
             }
@@ -285,7 +272,11 @@ namespace SWECVI.Infrastructure.Services
             {
                 AssessmentText = assessmentText,
                 Measurements = measurements,
-                StressText = ""
+                StressText = string.Empty,
+                SSN = study.AccessionNumber,
+                ExamDate = study.StudyDateTime.ToString("dd-MM-yyyy"),
+                PatientName = study.Patient.FirstName,
+                StudyType = study.StudyDescription
             };
         }
 
@@ -309,6 +300,99 @@ namespace SWECVI.Infrastructure.Services
             return valveDataList;
         }
 
+        public async Task<List<string>> GetCodeMeanings()
+        {
+            var codeMeanings = (await _findingStructureRepository.QueryAsync())
+                               .Select(i => i.TabName).Distinct().ToList();
+            return codeMeanings;
+        }
+
+        public async Task<List<ExamsDto.CodeMeaningChart>> GetTextValueByCodeMeaningCharts(string[] codeMeaningSelect, string? period)
+        {
+
+            List<ExamsDto.CodeMeaningChart> codeMeaningCharts = new List<ExamsDto.CodeMeaningChart>();
+            DateTime today = DateTime.UtcNow.Date;
+
+            Expression<Func<StudyFinding, bool>> filterStudy = i => codeMeaningSelect.Contains(i.FindingStructure.TabName);
+
+            if (!string.IsNullOrEmpty(period))
+            {
+                if (period.Equals("today"))
+                {
+                    Expression<Func<StudyFinding, bool>> searchFilter = i => i.Study.StudyDateTime.Year == today.Year && i.Study.StudyDateTime.Month == today.Month && i.Study.StudyDateTime.Day == today.Day;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-day-ago"))
+                {
+                    today = today.AddDays(-1);
+
+                    Expression<Func<StudyFinding, bool>> searchFilter = i => i.Study.StudyDateTime.Year == today.Year && i.Study.StudyDateTime.Month == today.Month && i.Study.StudyDateTime.Day == today.Day;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+
+                }
+                else if (period.Equals("2-days-ago"))
+                {
+                    var dayAgo = today.AddDays(-2);
+
+                    Expression<Func<StudyFinding, bool>> searchFilter = m => m.Study.StudyDateTime < today && m.Study.StudyDateTime >= dayAgo;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-week-ago"))
+                {
+                    DateTime lastWeekSunday = today.AddDays(-(int)today.DayOfWeek);
+                    lastWeekSunday = lastWeekSunday.AddDays(1).AddTicks(-1);
+                    DateTime lastWeekMonday = lastWeekSunday.AddDays(-6);
+                    lastWeekMonday = lastWeekMonday.AddTicks(1);
+
+                    Expression<Func<StudyFinding, bool>> searchFilter = e => e.Study.StudyDateTime >= lastWeekMonday && e.Study.StudyDateTime <= lastWeekSunday;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-month-ago"))
+                {
+                    today = today.AddMonths(-1);
+
+                    Expression<Func<StudyFinding, bool>> searchFilter = e => e.Study.StudyDateTime.Month == today.Month && e.Study.StudyDateTime.Year == today.Year;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("this-year"))
+                {
+                    Expression<Func<StudyFinding, bool>> searchFilter = e => e.Study.StudyDateTime.Year == today.Year;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+            }
+
+            var sutdyFindings = await _studyFindingRepository.QueryAsync(filterStudy, null, "Study,FindingStructure");
+
+
+
+            var studyFindingValues = sutdyFindings.Select(m => new
+            {
+                CodeMeaning = m.FindingStructure.TabName,
+                TextValue = m.FindingStructure.BoxHeader,
+                ValueString = m.SelectOptions
+            }).ToList();
+
+            var groupByCodeMeaning = studyFindingValues.GroupBy(m => m.CodeMeaning);
+            foreach (var it in groupByCodeMeaning)
+            {
+                ExamsDto.CodeMeaningChart codeMeaningChart = new ExamsDto.CodeMeaningChart();
+                codeMeaningChart.CodeMeaning = it.Key;
+                codeMeaningChart.TextValueByCodeMeanings = it.GroupBy(m => m.TextValue).Select(m => new ExamsDto.TextValueByCodeMeaning
+                {
+                    TextValue = m.Key,
+                    Count = m.Count()
+                }).ToList();
+                codeMeaningCharts.Add(codeMeaningChart);
+            }
+
+            return codeMeaningCharts;
+        }
 
         public async Task<StudyParameterElasticsearchModel> GetStudy(int id)
         {
@@ -328,6 +412,203 @@ namespace SWECVI.Infrastructure.Services
                 PatientName = exam.Patient.LastName,
             };
             return examDto;
+        }
+
+        public async Task<List<ExamsDto.ExamsCount>> GetExamsByPeriod(string? period)
+        {
+            DateTime today = DateTime.UtcNow.Date;
+            List<ExamsDto.ExamsCount> examsCounts = new List<ExamsDto.ExamsCount>();
+
+            Expression<Func<Study, bool>> filterStudy = m => m.StudyDateTime != DateTime.MinValue;
+
+            if (string.IsNullOrEmpty(period))
+            {
+                var result = await _studyRepository.QueryAsync(filterStudy);
+
+                examsCounts = result.GroupBy(x=>x.StudyDateTime.Year)
+                                    .Select(x => new ExamsDto.ExamsCount()
+                                    {
+                                        Time = x.Key,
+                                        Count = x.Count()
+                                    })
+                                    .ToList();
+            }
+            else if (period.Equals("this-year"))
+            {
+                Expression<Func<Study, bool>> searchFilter = i => i.StudyDateTime.Year == DateTime.Now.Year;
+                filterStudy = filterStudy.AndAlso(searchFilter);
+
+                var result = await _studyRepository.QueryAsync(filterStudy);
+
+                for (int i = 1; i <= 12; i++)
+                {
+                    ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+                    {
+                        Time = i,
+                        Count = result.Where(exam => exam.StudyDateTime.Month == i).Count()
+                    };
+                    examsCounts.Add(examsCount);
+                }
+            }
+            //else if (period.Equals("1-month-ago"))
+            //{
+            //    today = today.AddMonths(-1);
+            //    int lastDayOfMonth = DateTime.DaysInMonth(today.Year, today.Month);
+            //    exams = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month);
+            //    for (int i = 1; i <= lastDayOfMonth; i++)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = i,
+            //            Count = exams.Where(exam => exai.StudyDateTime.Day == i).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //}
+            //else if (period.Equals("1-week-ago"))
+            //{
+            //    DateTime lastWeekSunday = today.AddDays(-(int)today.DayOfWeek);
+            //    DateTime lastWeekMonday = lastWeekSunday.AddDays(-6);
+
+            //    exams = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month);
+            //    for (int i = 0; i < 7; i++)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = lastWeekMonday.Day + i,
+            //            Count = exams.Where(exam => exai.StudyDateTime.Day == (lastWeekMonday.Day + i)).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //}
+            //else if (period.Equals("2-days-ago"))
+            //{
+            //    today = today.AddDays(-2);
+            //    exams = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month);
+
+            //    var tempQuery = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month && i.StudyDateTime.Value.Day == today.Day);
+            //    for (int i = 0; i < 24; i += 1)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = i,
+            //            Count = tempQuery.Where(exam => exam.FormattedTime.Value.Hours == i).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //    today = today.AddDays(1);
+            //    tempQuery = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month && i.StudyDateTime.Value.Day == today.Day);
+
+            //    for (int i = 0; i < 24; i += 1)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = i,
+            //            Count = tempQuery.Where(exam => exam.FormattedTime.Value.Hours == i).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //}
+            //else if (period.Equals("1-day-ago"))
+            //{
+            //    today = today.AddDays(-1);
+            //    exams = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month && i.StudyDateTime.Value.Day == today.Day);
+            //    for (int i = 0; i < 24; i++)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = i,
+            //            Count = exams.Where(exam => exai.StudyDateTime.Hour == i).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //}
+            //else if (period.Equals("today"))
+            //{
+            //    exams = exams.Where(i => i.StudyDateTime.Value.Year == today.Year && i.StudyDateTime.Value.Month == today.Month && i.StudyDateTime.Value.Day == today.Day);
+            //    for (int i = 0; i < 24; i++)
+            //    {
+            //        ExamsDto.ExamsCount examsCount = new ExamsDto.ExamsCount
+            //        {
+            //            Time = i,
+            //            Count = exams.Where(exam => exam.FormattedTime.Value.Hours == i).Count()
+            //        };
+            //        examsCounts.Add(examsCount);
+            //    }
+            //}
+            return examsCounts;
+        }
+
+        public async Task<List<ExamsDto.ExamType>> GetExamTypesByPeriod(string? period)
+        {
+            DateTime today = DateTime.UtcNow.Date;
+
+            Expression<Func<Study, bool>> filterStudy = i => !string.IsNullOrEmpty(i.StudyDescription);
+            if (!string.IsNullOrEmpty(period))
+            {
+                if (period.Equals("today"))
+                {
+                    Expression<Func<Study, bool>> searchFilter = i => i.StudyDateTime.Year == today.Year && i.StudyDateTime.Month == today.Month && i.StudyDateTime.Day == today.Day;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-day-ago"))
+                {
+                    today = today.AddDays(-1);
+
+                    Expression<Func<Study, bool>> searchFilter = i => i.StudyDateTime.Year == today.Year && i.StudyDateTime.Month == today.Month && i.StudyDateTime.Day == today.Day;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+
+                }
+                else if (period.Equals("2-days-ago"))
+                {
+                    var dayAgo = today.AddDays(-2);
+
+                    Expression<Func<Study, bool>> searchFilter = m => m.StudyDateTime < today && m.StudyDateTime >= dayAgo;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-week-ago"))
+                {
+                    DateTime lastWeekSunday = today.AddDays(-(int)today.DayOfWeek);
+                    lastWeekSunday = lastWeekSunday.AddDays(1).AddTicks(-1);
+                    DateTime lastWeekMonday = lastWeekSunday.AddDays(-6);
+                    lastWeekMonday = lastWeekMonday.AddTicks(1);
+
+                    Expression<Func<Study, bool>> searchFilter = e => e.StudyDateTime >= lastWeekMonday && e.StudyDateTime <= lastWeekSunday;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-month-ago"))
+                {
+                    today = today.AddMonths(-1);
+
+                    Expression<Func<Study, bool>> searchFilter = e => e.StudyDateTime.Month == today.Month && e.StudyDateTime.Year == today.Year;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("this-year"))
+                {
+                    Expression<Func<Study, bool>> searchFilter = e => e.StudyDateTime.Year == today.Year;
+
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+            }
+
+
+            var examTypes = await _studyRepository.QueryAsync(filterStudy);
+
+            var types = examTypes.AsEnumerable().Select(x => x.StudyDescription);
+
+            var result = types.GroupBy(x=>x).Select(x=> new ExamsDto.ExamType()
+            {
+                Count = x.Count(),
+                Type = x.Key
+            }).ToList();
+
+         
+            return result;
         }
     }
 }

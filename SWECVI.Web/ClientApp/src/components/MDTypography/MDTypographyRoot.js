@@ -45,6 +45,7 @@ export default styled(Typography)(({ theme, ownerState }) => {
     WebkitTextFillColor: transparent.main,
     position: "relative",
     zIndex: 1,
+    cursor: "pointer",
   });
 
   // color value

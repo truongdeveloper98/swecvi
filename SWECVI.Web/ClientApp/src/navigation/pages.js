@@ -7,7 +7,7 @@ const PAGES = {
 
   profileOverview: "/profile/profile-overview",
   profileSetting: "/profile/settings",
-
+  profilePassword: "/profile/change-password",
   patients: "/patients",
 
   users: "/users",
@@ -19,6 +19,8 @@ const PAGES = {
   newHospital: "/hospitals/new-hospital",
   newDepartment: "/departments/new-department",
   newAssessment: "/assessment/new-assessment",
+  newFinding: "/finding/new-finding",
+  editFinding: "/finding/edit-finding",
   newReferences: "/references/new-references",
   newSettings: "/settings/new-settings",
   editUser: "/users/edit-user",
@@ -27,12 +29,13 @@ const PAGES = {
   editReferences: "/references/edit-references",
   editAssessment: "/assessment/edit-assessment",
   editSettings: "/settings/edit-settings",
-
+  changepassword: "/account-settings/changepassword",
   editExam: "/exams/edit-exam",
 
   sessions: "/sections",
   references: "/references",
   settings: "/settings",
+  findingStructure: "/finding-structure",
   assessment: "/assessment",
   parameters: "/parameters",
   python: "/scripts",

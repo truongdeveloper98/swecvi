@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import InstagramIcon from "@mui/icons-material/Instagram";
 import MDBox from "components/MDBox";
 import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 import Header from "features/profile/components/Header";
@@ -26,23 +26,23 @@ function Profile() {
                   email: "",
                   location: "",
                 }}
-                social={[
-                  {
-                    link: "https://www.facebook.com/CreativeTim/",
-                    icon: <FacebookIcon />,
-                    color: "facebook",
-                  },
-                  {
-                    link: "https://twitter.com/creativetim",
-                    icon: <TwitterIcon />,
-                    color: "twitter",
-                  },
-                  {
-                    link: "https://www.instagram.com/creativetimofficial/",
-                    icon: <InstagramIcon />,
-                    color: "instagram",
-                  },
-                ]}
+                // social={[
+                //   {
+                //     link: "https://www.facebook.com/CreativeTim/",
+                //     icon: <FacebookIcon />,
+                //     color: "facebook",
+                //   },
+                //   {
+                //     link: "https://twitter.com/creativetim",
+                //     icon: <TwitterIcon />,
+                //     color: "twitter",
+                //   },
+                //   {
+                //     link: "https://www.instagram.com/creativetimofficial/",
+                //     icon: <InstagramIcon />,
+                //     color: "instagram",
+                //   },
+                // ]}
                 action={{ route: "", tooltip: "Edit Profile" }}
                 shadow={false}
               />

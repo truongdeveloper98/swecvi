@@ -48,6 +48,23 @@ public class DepartmentController : ControllerBase
         }
     }
 
+
+    [Route("api/department-management/departments/{id}")]
+    [Authorize(Roles = "HospitalAdmin")]
+    [HttpDelete]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            var result = await _departmentService.DeleteDepartment(id);
+            return Ok(result);
+        }
+        catch (System.Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
     [Route("api/department-management/departments")]
     [Authorize(Roles = "HospitalAdmin")]
     [HttpGet]

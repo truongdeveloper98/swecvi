@@ -61,7 +61,7 @@ export default function ParameterSettingsDetail() {
           functionSelector: functionSelector.find(
             (item) => item.value === settings?.functionSelector
           )?.name,
-          departmentName: "",
+          departmentName: settings?.departmentName,
         }}
         onSubmit={(values) => {
           // console.log({
@@ -221,7 +221,8 @@ export default function ParameterSettingsDetail() {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <Selector
-                        // disableClearable
+                        defaultValue={values.departmentName}
+                        key={values.departmentName}
                         label="Department Name"
                         options={departments.items.map((item) => item.name)}
                         onChange={(value) => setFieldValue("departmentName", value)}

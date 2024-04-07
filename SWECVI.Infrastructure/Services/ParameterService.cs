@@ -10,6 +10,8 @@ using System.Linq.Expressions;
 using Microsoft.Extensions.Logging;
 using SWECVI.ApplicationCore.Interfaces.Repositories;
 using SWECVI.ApplicationCore.Interfaces.Services;
+using SWECVI.Infrastructure.Repositories;
+using SWECVI.ApplicationCore.Utilities;
 
 namespace SWECVI.Infrastructure.Services
 {
@@ -20,230 +22,247 @@ namespace SWECVI.Infrastructure.Services
         private readonly ILogger<ParameterService> _logger;
         private readonly IParameterReferenceRepository _parameterReferenceRepository;
         private readonly IParameterSettingRepository _parameterSettingRepository;
+        private readonly IParameterRepository _studyRepository;
+        private readonly IParameterRepository _parameterRepository;
+        private readonly IStudyRepository _studyExamRepository;
 
-        public ParameterService(ILogger<ParameterService> logger, ICacheService cacheService, IParameterSettingRepository parameterSettingRepository, IParameterReferenceRepository parameterReferenceRepository)
+        public ParameterService(ILogger<ParameterService> logger,
+                                IParameterRepository studyRepository,
+                                ICacheService cacheService, 
+                                IParameterSettingRepository parameterSettingRepository,
+                                IParameterRepository parameterRepository,
+                                IStudyRepository studyExamRepository,
+                                IParameterReferenceRepository parameterReferenceRepository)
         {
             _cacheService = cacheService;
             _parameterReferenceRepository = parameterReferenceRepository;
             _logger = logger;
             _parameterSettingRepository = parameterSettingRepository;
+            _studyRepository = studyRepository;
+            _parameterRepository = parameterRepository;
+            _studyExamRepository = studyExamRepository;
         }
 
         public async Task<List<ParameterDto.ParameterValuesChartByPatientId>> GetValuesByParametersForPatient(int[] ids, int patientId)
         {
-            //List<ParameterDto.ParameterValuesChartByPatientId> parameterValuesCharts = new List<ParameterValuesChartByPatientId>();
-            //if (ids.Length == 0)
-            //{
-            //    return parameterValuesCharts;
-            //}
-            //var parameters = await _parameterRepository.QueryAsync(i => ids.Contains(i.Id) && !String.IsNullOrEmpty(i.TableFriendlyName));
 
-            //Expression<Func<ExamParameterOld, bool>> filter = i => i.Exam.Patient.Id == patientId;
+            var patientIdByStudy = (_studyExamRepository.FirstOrDefault(x => x.Id == patientId))?.PatientId;
 
-            //var examPatients = await _examPatientRepository.QueryAsync(filter: filter, includeProperties: "Exam");
+            List<ParameterDto.ParameterValuesChartByPatientId> parameterValuesCharts = new List<ParameterValuesChartByPatientId>();
 
-            //foreach (var parameter in parameters)
-            //{
-            //    var parameterValuesChart = new ParameterDto.ParameterValuesChartByPatientId
-            //    {
-            //        ParameterName = parameter.TableFriendlyName,
-            //        ValueByTimes = examPatients.Where(m => m.TableFriendlyName == parameter.TableFriendlyName && m.Exam.FormattedDate != null)
-            //                        .Select(m => new ValueByTime
-            //                        {
-            //                            Value = m.Value,
-            //                            Time = (m.Value != null) ? m.Exam.FormattedDate : null
-            //                        }).ToList()
-            //    };
-            //    parameterValuesCharts.Add(parameterValuesChart);
-            //}
-            return new List<ParameterValuesChartByPatientId>();
+
+            if (patientIdByStudy == null)
+            {
+                return parameterValuesCharts;
+            }
+
+            if (ids.Length == 0)
+            {
+                return parameterValuesCharts;
+            }
+            var parameters = await _parameterSettingRepository.QueryAsync(i => ids.Contains(i.Id) && !String.IsNullOrEmpty(i.TableFriendlyName));
+
+            Expression<Func<StudyParameter, bool>> filter = i => i.HospitalStudy.Patient.Id == patientIdByStudy;
+
+            var examPatients = await _parameterRepository.QueryAsync(filter: filter, includeProperties: "HospitalStudy");
+
+            foreach (var parameter in parameters)
+            {
+                var parameterValuesChart = new ParameterDto.ParameterValuesChartByPatientId
+                {
+                    ParameterName = parameter.TableFriendlyName,
+                    ValueByTimes = examPatients.Where(m => m.ParameterId == parameter.ParameterId && m.HospitalStudy.StudyDateTime != null)
+                                    .Select(m => new ValueByTime
+                                    {
+                                        Value = (decimal)Math.Round(m.ResultValue,0, MidpointRounding.AwayFromZero),
+                                        Time = (m.ResultValue != null) ? m.HospitalStudy.StudyDateTime : null
+                                    }).ToList()
+                };
+                parameterValuesCharts.Add(parameterValuesChart);
+            }
+            return parameterValuesCharts;
         }
 
 
         public async Task<List<ParameterDto.ParameterStaticChart>> GetValuesByParameters(int ySelectorId, string xValueSelector, string? period)
         {
+            var parameter = (await _parameterSettingRepository.QueryAsync(i => i.Id == ySelectorId && !String.IsNullOrEmpty(i.TableFriendlyName))).FirstOrDefault();
 
-            //Expression<Func<ParameterViewModel, bool>> filter = i => i.Id == ySelectorId && !String.IsNullOrEmpty(i.TableFriendlyName);
+            if (parameter == null)
+                throw new Exception("Can not found parameter");
 
-            //var parameter = _parameterRepository.FirstOrDefault(filter : filter);
+            DateTime today = DateTime.UtcNow.Date;
+            Dictionary<string, int> countByValueSelected = new Dictionary<string, int>();
 
-            //if (parameter == null)
-            //    throw new Exception("Can not found parameter");
+            Expression<Func<StudyParameter, bool>> filterStudy = i => !string.IsNullOrEmpty(i.HospitalStudy.StudyDescription) && i.ParameterId == parameter.ParameterId;
 
-            //Expression<Func<ExamPatient, bool>> filterExams = m => m.TableFriendlyName == parameter.TableFriendlyName;
+            if (!string.IsNullOrEmpty(period))
+            {
+                if (period.Equals("today"))
+                {
+                    Expression<Func<StudyParameter, bool>> searchFilter = i => i.HospitalStudy.StudyDateTime.Year == today.Year && i.HospitalStudy.StudyDateTime.Month == today.Month && i.HospitalStudy.StudyDateTime.Day == today.Day;
 
-            //DateTime today = DateTime.UtcNow.Date;
-            //Dictionary<string, int> countByValueSelected = new Dictionary<string, int>();
-            //if (!string.IsNullOrEmpty(period))
-            //{
-            //    if (period.Equals("today"))
-            //    {
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate == today;
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-day-ago"))
+                {
+                    today = today.AddDays(-1);
 
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
+                    Expression<Func<StudyParameter, bool>> searchFilter = i => i.HospitalStudy.StudyDateTime.Year == today.Year && i.HospitalStudy.StudyDateTime.Month == today.Month && i.HospitalStudy.StudyDateTime.Day == today.Day;
 
-            //    }
-            //    else if (period.Equals("1-day-ago"))
-            //    {
-            //        today = today.AddDays(-1);
+                    filterStudy = filterStudy.AndAlso(searchFilter);
 
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate == today;
+                }
+                else if (period.Equals("2-days-ago"))
+                {
+                    var dayAgo = today.AddDays(-2);
 
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
-            //    }
-            //    else if (period.Equals("2-days-ago"))
-            //    {
-            //        var dayAgo = today.AddDays(-2);
+                    Expression<Func<StudyParameter, bool>> searchFilter = m => m.HospitalStudy.StudyDateTime < today && m.HospitalStudy.StudyDateTime >= dayAgo;
 
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate >= dayAgo;
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-week-ago"))
+                {
+                    DateTime lastWeekSunday = today.AddDays(-(int)today.DayOfWeek);
+                    lastWeekSunday = lastWeekSunday.AddDays(1).AddTicks(-1);
+                    DateTime lastWeekMonday = lastWeekSunday.AddDays(-6);
+                    lastWeekMonday = lastWeekMonday.AddTicks(1);
 
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
-            //    }
-            //    else if (period.Equals("1-week-ago"))
-            //    {
-            //        DateTime lastWeekSunday = today.AddDays(-(int)today.DayOfWeek);
+                    Expression<Func<StudyParameter, bool>> searchFilter = e => e.HospitalStudy.StudyDateTime >= lastWeekMonday && e.HospitalStudy.StudyDateTime <= lastWeekSunday;
 
-            //        lastWeekSunday = lastWeekSunday.AddDays(1).AddTicks(-1);
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("1-month-ago"))
+                {
+                    today = today.AddMonths(-1);
 
-            //        DateTime lastWeekMonday = lastWeekSunday.AddDays(-6);
+                    Expression<Func<StudyParameter, bool>> searchFilter = e => e.HospitalStudy.StudyDateTime.Month == today.Month && e.HospitalStudy.StudyDateTime.Year == today.Year;
 
-            //        lastWeekMonday = lastWeekMonday.AddTicks(1);
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+                else if (period.Equals("this-year"))
+                {
+                    Expression<Func<StudyParameter, bool>> searchFilter = e => e.HospitalStudy.StudyDateTime.Year == today.Year;
 
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate >= lastWeekMonday && i.Exam.FormattedDate <= lastWeekSunday;
+                    filterStudy = filterStudy.AndAlso(searchFilter);
+                }
+            }
 
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
-            //    }
-            //    else if (period.Equals("1-month-ago"))
-            //    {
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate!.Value.Month == today.Month - 1 && i.Exam.FormattedDate.Value.Year == today.Year;
-
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
-            //    }
-            //    else if (period.Equals("this-year"))
-            //    {
-            //        Expression<Func<ExamPatient, bool>> searchFilter = i => i.Exam.FormattedDate!.Value.Year == today.Year;
-
-            //        filterExams = PredicateBuilder.AndAlso(filterExams, searchFilter);
-            //    }
-            //}
-
-
-            //Expression<Func<ExamPatient, ExamPatient>> selectorExpression = examPartient => new ExamPatient
-            //{
-            //    ParameterName = examPartient.ParameterName,
-            //    TableFriendlyName = examPartient.TableFriendlyName,
-            //    Unit  = examPartient.Unit,
-            //    Value = examPartient.Value,
-            //    Reference = examPartient.Reference,
-            //    IsOutsideReferenceRange = examPartient.IsOutsideReferenceRange,
-            //    DisplayDecimal = examPartient.DisplayDecimal,
-            //    SelectedFunction = examPartient.SelectedFunction,
-            //    Exam = examPartient.Exam,
-            //    Id = examPartient.Id,
-            //};
-
-            //var exams = await _examPatientRepository.QueryAndSelectAsync(selector: selectorExpression,
-            //        filter : filterExams,
-            //        includeProperties: "Exam");
+            var examTypes = await _studyRepository.QueryAsync(filterStudy, null, "HospitalStudy");
 
 
-            //List<ParameterDto.ParameterStaticChart> parameterStaticCharts = new List<ParameterStaticChart>();
-            //if (xValueSelector == "Age")
-            //{
-            //    var existedAge = exams.Where(m => m.Exam.Age != null);
-            //    if (existedAge != null)
-            //    {
-            //        parameterStaticCharts = exams.Select(m => new ParameterStaticChart
-            //        {
-            //            XValue = m.Exam.Age.ToString(),
-            //            YValue = m.Value
-            //        }).ToList();
-            //    }
-            //}
-            //else if (xValueSelector == "Height")
-            //{
-            //    var existedHeight = exams.Where(m => m.Exam.Height != null);
-            //    if (existedHeight != null)
-            //    {
-            //        parameterStaticCharts = exams.Select(m => new ParameterStaticChart
-            //        {
-            //            XValue = m.Exam.Height.ToString(),
-            //            YValue = m.Value
-            //        }).ToList();
-            //    }
-            //}
-            //else if (xValueSelector == "Weight")
-            //{
-            //    var existedWeight = exams.Where(m => m.Exam.Weight != null);
-            //    if (existedWeight != null)
-            //    {
-            //        parameterStaticCharts = exams.Select(m => new ParameterStaticChart
-            //        {
-            //            XValue = m.Exam.Weight.ToString(),
-            //            YValue = m.Value
-            //        }).ToList();
-            //    }
-            //}
-            //else if (xValueSelector == "BloodPressure")
-            //{
-            //    var existedBloodPressure = exams.Where(m => m.Exam.BloodPressure != null);
-            //    if (existedBloodPressure != null)
-            //    {
-            //        parameterStaticCharts = exams.Where(m => m.Exam.BloodPressure != null).Select(m => new ParameterStaticChart
-            //        {
-            //            XValue = m.Exam.BloodPressure.FormatBloodPressure(),
-            //            YValue = m.Value
-            //        }).ToList();
-            //    }
-            //}
-            //else if (xValueSelector == "BSA")
-            //{
-            //    var existedBSA = exams.Where(m => m.Exam.BSA != null);
-            //    if (existedBSA != null)
-            //    {
-            //        parameterStaticCharts = exams.Select(m => new ParameterStaticChart
-            //        {
-            //            XValue = m.Exam.BSA.ToString(),
-            //            YValue = m.Value
-            //        }).ToList();
-            //    }
-            //}
-            //return parameterStaticCharts;
-
-            return null;
+            List<ParameterDto.ParameterStaticChart> parameterStaticCharts = new List<ParameterStaticChart>();
+            if (xValueSelector == "Age")
+            {
+                var existedAge = examTypes.Where(m => m.HospitalStudy.Age != null);
+                if (existedAge != null)
+                {
+                    parameterStaticCharts = examTypes.Select(m => new ParameterStaticChart
+                    {
+                        XValue = m.HospitalStudy.Age.ToString(),
+                        YValue = (decimal?)m.ResultValue
+                    }).ToList();
+                }
+            }
+            else if (xValueSelector == "Height")
+            {
+                var existedHeight = examTypes.Where(m => m.HospitalStudy.Height != null);
+                if (existedHeight != null)
+                {
+                    parameterStaticCharts = examTypes.Select(m => new ParameterStaticChart
+                    {
+                        XValue = m.HospitalStudy.Height.ToString(),
+                        YValue = (decimal?)m.ResultValue
+                    }).ToList();
+                }
+            }
+            else if (xValueSelector == "Weight")
+            {
+                var existedWeight = examTypes.Where(m => m.HospitalStudy.Weight != null);
+                if (existedWeight != null)
+                {
+                    parameterStaticCharts = examTypes.Select(m => new ParameterStaticChart
+                    {
+                        XValue = m.HospitalStudy.Weight.ToString(),
+                        YValue = (decimal?)m.ResultValue
+                    }).ToList();
+                }
+            }
+            else if (xValueSelector == "BloodPressure")
+            {
+                var existedBloodPressure = examTypes.Where(m => m.HospitalStudy.DiastoilccBloodPressure != null);
+                if (existedBloodPressure != null)
+                {
+                    parameterStaticCharts = examTypes.Where(m => m.HospitalStudy.DiastoilccBloodPressure != null).Select(m => new ParameterStaticChart
+                    {
+                        XValue = m.HospitalStudy.DiastoilccBloodPressure.ToString(),
+                        YValue = (decimal?)m.ResultValue
+                    }).ToList();
+                }
+            }
+            else if (xValueSelector == "BSA")
+            {
+                var existedBSA = examTypes.Where(m => m.HospitalStudy.BodySurfaceArea != null);
+                if (existedBSA != null)
+                {
+                    parameterStaticCharts = examTypes.Select(m => new ParameterStaticChart
+                    {
+                        XValue = m.HospitalStudy.BodySurfaceArea.ToString(),
+                        YValue = (decimal?)m.ResultValue
+                    }).ToList();
+                }
+            }
+            return parameterStaticCharts;
         }
         public async Task<List<ParameterDto.ParameterSelector>> GetParameterNames()
         {
-            //var cachedParameters = _cacheService.GetParameterSettings();
-            //var groupTableFriendlyName = cachedParameters.Where(i => !String.IsNullOrEmpty(i.TableFriendlyName))
-            //.GroupBy(m => m.TableFriendlyName);
-            //List<ParameterDto.ParameterSelector> parameters = groupTableFriendlyName.Select(i => new ParameterDto.ParameterSelector()
-            //{
-            //    Id = i.Last().Id,
-            //    ParameterName = i.Last().TableFriendlyName!
-            //}).OrderBy(i => i.ParameterName).ToList();
-            return new List<ParameterDto.ParameterSelector>();
+            var cachedParameters = _cacheService.GetParameterSettings();
+            var groupTableFriendlyName = cachedParameters.Where(i => !String.IsNullOrEmpty(i.TableFriendlyName))
+            .GroupBy(m => m.TableFriendlyName);
+            List<ParameterDto.ParameterSelector> parameters = groupTableFriendlyName.Select(i => new ParameterDto.ParameterSelector()
+            {
+                Id = i.Last().Id,
+                ParameterName = i.Last().TableFriendlyName!
+            }).OrderBy(i => i.ParameterName).ToList();
+            return parameters;
         }
 
         public async Task<List<ParameterViewModel>> GetParametersWithReferences()
         {
             var cachedParameterSettings = await _parameterSettingRepository.Get();
-            //var parameterList = cachedParameters.OrderBy(i => i.ParameterName).ThenBy(i => i.Priority).ToList();
-            var parameterList = cachedParameterSettings.ToList().Select(setting => new ParameterViewModel()
+
+
+            var parameterList = new List<ParameterViewModel>();
+
+            var manufacturerDicomParameters = _cacheService.GetManufacturerDicomParameters();
+
+            foreach(var manufacturerDicom in manufacturerDicomParameters)
             {
-                Description = setting.Description,
-                FunctionSelector = setting.FunctionSelector,
-                DisplayDecimal = setting.DisplayDecimal,
-                POH = setting.POH,
-                ShowInAssessmentText = setting.ShowInAssessmentText,
-                ShowInChart = setting.ShowInChart,
-                TableFriendlyName = setting.TableFriendlyName,
-                ShowInParameterTable = setting.ShowInParameterTable,
-                ParameterId = setting.ParameterId,
-                ParameterSubHeader = setting.ParameterSubHeader,
-                ParameterHeader = setting.ParameterHeader,
-                ParameterOrder = setting.ParameterOrder,
-            }).ToList();
+                var param = new ParameterViewModel()
+                {
+                    ParameterId = manufacturerDicom.ParameterId
+                };
+
+                var setting = cachedParameterSettings.Where(x=>x.ParameterId == manufacturerDicom.ParameterId).FirstOrDefault();
+
+                if(setting != null)
+                {
+                    param.Description = setting.Description;
+                    param.FunctionSelector = setting.FunctionSelector;
+                    param.DisplayDecimal = setting.DisplayDecimal;
+                    param.POH = setting.POH;
+                    param.ShowInAssessmentText = setting.ShowInAssessmentText;
+                    param.ShowInChart = setting.ShowInChart;
+                    param.TableFriendlyName = setting.TableFriendlyName;
+                    param.ShowInParameterTable = setting.ShowInParameterTable;
+                    param.ParameterSubHeader = setting.ParameterSubHeader;
+                    param.ParameterHeader = setting.ParameterHeader;
+                    param.ParameterOrder = setting.ParameterOrder;
+                }
+
+                parameterList.Add(param);
+            }
+
             var parametersToCheckUnique = new Dictionary<string, ParameterViewModel>();
             foreach (ParameterViewModel parameter in parameterList)
             {
@@ -253,7 +272,8 @@ namespace SWECVI.Infrastructure.Services
                     parametersToCheckUnique.Add(parameter.ParameterId.ToString(), parameter);
                 }
             }
-            var references = _cacheService.GetReferences();
+
+            var references = await _parameterReferenceRepository.Get();
             foreach (var reference in references)
             {
                 try
@@ -291,31 +311,6 @@ namespace SWECVI.Infrastructure.Services
             return parameterList;
         }
 
-        private ParameterViewModel CloneParameter(ParameterViewModel parameter, Exam exam, Dictionary<string, DicomSRDto.Parameter> epParameters)
-        {
-            //ParameterViewModel clonedParam = parameter.Clone();
-            //clonedParam.Exam = exam;
-
-            //DicomSRDto.Parameter epParameter = null;
-            ////if (parameter.EPParameterName != null && epParameters.TryGetValue(parameter.EPParameterName.Trim(), out epParameter))
-            //if (parameter.ParameterId != null && epParameters.TryGetValue(parameter.ParameterId.Trim(), out epParameter))
-            //{
-            //    if (epParameter != null)
-            //    {
-            //        if (epParameter.ResultValue != null && parameter.DisplayDecimal >= 0)
-            //        {
-            //            clonedParam.ResultValue = (float)Math.Round(UnitExtension.ConvertFromSI((decimal)epParameter.ResultValue.Value, clonedParam.UnitName), parameter.DisplayDecimal.Value, MidpointRounding.AwayFromZero);
-            //        }
-            //        else if (epParameter.ResultValue.HasValue)
-            //        {
-            //            clonedParam.ResultValue = UnitExtension.ConvertFromSI((decimal)epParameter.ResultValue.Value, clonedParam.UnitName);
-            //        }
-            //    }
-            //}
-            //clonedParam.Reference = clonedParam.MatchReference(exam.Age, exam.Patient.Gender);
-            //return clonedParam;
-            return new ParameterViewModel();
-        }
 
         public async Task<PagedResponseDto<ParameterDto.ParameterValue>> GetParameterValues(int currentPage, int pageSize, string? sortColumnDirection, string? sortColumnName, string? textSearch)
         {
@@ -575,14 +570,15 @@ namespace SWECVI.Infrastructure.Services
 
         private string GetParameterNameByParameterId(string parameterId)
         {
+            var manufacturerDicomParameters = _cacheService.GetManufacturerDicomParameters();
             string parameterName = string.Empty;
             if (!string.IsNullOrEmpty(parameterId))
             {
-                var manufacturerDicomParameter = _parameterReferenceRepository.FirstOrDefault(x => x.ParameterId == parameterId);
+                var manufacturerDicomParameter = manufacturerDicomParameters.FirstOrDefault(x => x.ParameterId == parameterId);
 
                 if (manufacturerDicomParameter != null)
                 {
-                    parameterName = string.IsNullOrEmpty(manufacturerDicomParameter.ParameterNameLogic) ? string.Empty : manufacturerDicomParameter.ParameterNameLogic;
+                    parameterName = string.IsNullOrEmpty(manufacturerDicomParameter.ProviderParameterShortName) ? string.Empty : manufacturerDicomParameter.ProviderParameterShortName;
                 }
 
             }

@@ -7,6 +7,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 import TsGridTable from "components/Customized/TsGridTable";
 import { useSelector } from "react-redux";
 import { Box, Button } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 import useHospital from "./hooks/useHospital";
 import { getHospitalRequest } from "./services";
 
@@ -36,7 +37,9 @@ export default function Hospital() {
       header: () => null,
       cell: ({ row }) => (
         <Box style={{ textAlign: "right" }}>
-          <Button onClick={() => handleEditHospital(row.original.id)}>Edit</Button>
+          <Button onClick={() => handleEditHospital(row.original.id)}>
+            <EditIcon />
+          </Button>
         </Box>
       ),
     }),

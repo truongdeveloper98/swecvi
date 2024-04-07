@@ -23,7 +23,7 @@ function ParameterFiltersCard({ onChange }) {
         </MDBox>
         <MDBox overflow="auto" flexDirection="row" p={2}>
           {filters.map(({ title, poh }) => (
-            <MDBox display="inline-block" m={0.5} key={title}>
+            <MDBox display="inline-block" m={0.5}>
               <MDButton
                 onClick={() => handleFilter(title, poh)}
                 size="small"

@@ -17,6 +17,7 @@ import department from "./department.reducer";
 import references from "./references.reducer";
 import assessment from "./assessment.reducer";
 import settings from "./settings.reducer";
+import findings from "./finding.reducer";
 
 const appReducer = combineReducers({
   auth,
@@ -32,6 +33,7 @@ const appReducer = combineReducers({
   hospital,
   department,
   references,
+  findings,
   assessment,
   settings,
 });

@@ -18,7 +18,7 @@ export default function ParametersChart() {
     <Grid container spacing={1}>
       <Grid item xs={12}>
         <BubbleChart
-          title={t("ParametersStatic")}
+          title={t("Parameters")}
           chart={{
             datasets: !xAxisSelected
               ? []

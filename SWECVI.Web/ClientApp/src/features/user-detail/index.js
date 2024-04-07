@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import React, { memo, useEffect, useState } from "react";
 import MDBox from "components/MDBox";
@@ -32,6 +33,7 @@ import "./style.css";
 const UserSchema = Yup.object().shape({
   firstName: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
   lastName: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
+  passWord: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   phoneNumber: Yup.string()
     .matches(REG_EXP.phone, "Phone number is not valid")
@@ -49,14 +51,6 @@ function UserDetail() {
 
   const { t } = useTranslation();
 
-  // const [hospitalName, setHospitalName] = useState(
-  //   hospitals.find((item) => item.id === user?.hospitalId)?.name
-  // );
-
-  // const handleChangeSelect = (value) => {
-  //   setHospitalName(value);
-  // };
-
   return (
     <BaseLayout>
       <Formik
@@ -67,6 +61,7 @@ function UserDetail() {
           email: user?.email,
           phoneNumber: user?.phoneNumber,
           roles: user?.roles,
+          passWord: user?.passWord,
           department: decodedToken?.[
             "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
           ].includes("HospitalAdmin")
@@ -105,8 +100,6 @@ function UserDetail() {
               hospitalId: parseInt(localStorage.getItem("hospitalId").toString(), 10),
             };
           }
-
-          // console.log(resp);
           handleSubmitForm(resp);
         }}
         // validateOnChange={false}
@@ -158,6 +151,17 @@ function UserDetail() {
                         placeholder="Thompson"
                         onChange={handleChange}
                         error={errors.lastName}
+                      />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <FormField
+                        value={values.passWord}
+                        name="passWord"
+                        label="Password"
+                        type="password"
+                        placeholder="enter password"
+                        onChange={handleChange}
+                        error={errors.passWord}
                       />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -256,14 +260,17 @@ function UserDetail() {
                       "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
                     ].includes("HospitalAdmin") && (
                       <Grid item xs={12} sm={6}>
+                        <p>{typeof user?.indexDepartment === "number"}</p>
                         <Selector
                           disableClearable
+                          key={user?.indexDepartment}
+                          defaultValue={user?.indexDepartment}
                           label="Department"
                           options={departments.items.map((item) => item.name)}
-                          // value={
-                          //   departments.items.find((item) => item.id === user?.indexDepartment)
-                          //     ?.name
-                          // }
+                          value={
+                            departments.items.find((item) => item.id === user?.indexDepartment)
+                              ?.name
+                          }
                           onChange={(value) => setFieldValue("department", value)}
                         />
                       </Grid>

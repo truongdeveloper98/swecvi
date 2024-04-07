@@ -1,11 +1,25 @@
+/* eslint-disable no-console */
+import { parameterNamesRequest } from "features/statistics/services";
 import _ from "lodash";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import useExam from "./useExam";
+import { getDiagramRequest } from "../services";
 
 const useDiagramChart = () => {
   const [data, setData] = useState([]);
   const diagram = useSelector((state) => state.patient.diagram);
+  const { params } = useExam();
+
+  useEffect(() => {
+    parameterNamesRequest();
+    getDiagramRequest();
+  }, []);
+
+  const getParameterValues = (values) => {
+    getDiagramRequest({ ids: values.map((x) => x.id), patientId: params.id });
+  };
 
   const getArrLabels = () => [
     ...new Set(
@@ -22,7 +36,7 @@ const useDiagramChart = () => {
     const clonedDiagram = _.cloneDeep(diagram);
     clonedDiagram.forEach((element) => {
       if (element?.valueByTimes?.length && element?.valueByTimes[0].time) {
-        const times = element?.valueByTimes?.map((y) => y.time);
+        const times = element?.valueByTimes?.map((y) => moment(y.time).format("YYYY-MM-DD"));
         const otherTimeNeedPush = oldLabelsDateTime?.filter((time) => !times.includes(time));
         if (otherTimeNeedPush.length) {
           otherTimeNeedPush.forEach((time) => {
@@ -44,6 +58,7 @@ const useDiagramChart = () => {
 
   return {
     data,
+    getParameterValues,
     getArrLabels,
   };
 };

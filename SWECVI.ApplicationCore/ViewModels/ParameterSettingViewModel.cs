@@ -17,6 +17,8 @@
         public virtual string? POH { get; set; }
         public string? Description { get; set; }
         public Enum.FunctionSelector? FunctionSelector { get; set; }
+        public string FunctionSelectorName { get; set; }
+        public string? DepartmentName { get; set; }
         public int? DepartmentId { get; set; }
     }
 }

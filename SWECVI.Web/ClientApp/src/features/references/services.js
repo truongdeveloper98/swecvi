@@ -7,6 +7,8 @@ export const getReferencesRequest = async (params) => {
   try {
     dispatch(requested());
     const response = await API.referencess(params);
+    // eslint-disable-next-line no-console
+    console.log(response);
     if (response.data) {
       dispatch(referencesSuccess(response.data));
     }

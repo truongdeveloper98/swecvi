@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 import BaseLayout from "components/Customized/BaseLayout";
+// import ChangePassword from "features/account-settings/components/ChangePassword";
 import Sidenav from "features/account-settings/components/Sidenav";
 import Header from "features/account-settings/components/Header";
 

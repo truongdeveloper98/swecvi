@@ -45,6 +45,8 @@ import Assessment from "features/assessment";
 import AssessmentDetail from "features/assessment-detail";
 import ParameterSettings from "features/settings";
 import ParameterSettingsDetail from "features/settings-detail";
+import FindingStructure from "features/finding-structure";
+// import ChangePassword from "features/account-settings/components/ChangePassword";
 import PAGES from "./pages";
 
 const routes = [
@@ -66,9 +68,22 @@ const routes = [
         route: PAGES.profileSetting,
         component: <Settings />,
       },
+      // {
+      //   name: "Change Password",
+      //   key: "change-password",
+      //   route: PAGES.profilePassword,
+      //   component: <ChangePassword />,
+      // },
     ],
   },
-  // { type: "divider", key: "divider-0" },
+  {
+    type: "tab",
+    name: "Patients",
+    key: "patients",
+    route: PAGES.patients,
+    icon: <Icon fontSize="medium">medical_information</Icon>,
+    component: <Patients />,
+  },
   {
     type: "tab",
     name: "Analytics",
@@ -111,14 +126,6 @@ const routes = [
   },
   {
     type: "tab",
-    name: "Patients",
-    key: "patients",
-    route: PAGES.patients,
-    icon: <Icon fontSize="medium">medical_information</Icon>,
-    component: <Patients />,
-  },
-  {
-    type: "tab",
     name: "Assessment",
     key: "assessment",
     route: PAGES.assessment,
@@ -141,6 +148,26 @@ const routes = [
     icon: <Icon fontSize="medium">ballot</Icon>,
     component: <ParameterSettings />,
   },
+  {
+    type: "tab",
+    name: "Finding Structure",
+    key: "finding-structure",
+    route: PAGES.findingStructure,
+    icon: <Icon fontSize="medium">ballot</Icon>,
+    component: <FindingStructure />,
+  },
+  // {
+  //   type: "page",
+  //   key: "new-finding",
+  //   route: PAGES.newFinding,
+  //   component: <FindingDetail />,
+  // },
+  // {
+  //   type: "page",
+  //   key: "edit-finding",
+  //   route: `${PAGES.editFinding}/:id`,
+  //   component: <FindingDetail />,
+  // },
   {
     type: "page",
     key: "new-assessment",

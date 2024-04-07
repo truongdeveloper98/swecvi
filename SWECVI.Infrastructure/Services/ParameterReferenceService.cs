@@ -54,7 +54,7 @@ namespace SWECVI.Infrastructure.Services
 
             if (!string.IsNullOrEmpty(textSearch))
             {
-                Expression<Func<ParameterReference, bool>> searchFilter = i => i.ParameterNameLogic.Contains(textSearch);
+                Expression<Func<ParameterReference, bool>> searchFilter = i => i.ParameterNameLogic.Contains(textSearch) || i.ParameterId.Contains(textSearch);
 
                 filter = PredicateBuilder.AndAlso(filter, searchFilter);
             }
@@ -66,7 +66,7 @@ namespace SWECVI.Infrastructure.Services
                 ParameterNameLogic = i.ParameterNameLogic,
                 AgeFrom = i.AgeFrom,
                 AgeTo = i.AgeTo,
-                Gender = i.Gender,
+                GenderName = i.Gender == ApplicationCore.Enum.Gender.Male ? "Male" : i.Gender == ApplicationCore.Enum.Gender.Female ? "Female" : "Unknown",
                 DisplayUnit = i.DisplayUnit,
                 DepaermentId = i.DepaermentId,
                 MildlyAbnormalRangeLower = i.MildlyAbnormalRangeLower,

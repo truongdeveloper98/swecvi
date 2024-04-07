@@ -11,7 +11,7 @@ namespace SWECVI.Infrastructure
 
         public static List<ManufacturerDicomParameters> GetValueFromExcel(IEnumerable<DicomTags> dicomTags)
         {
-            WorkBook workbook = WorkBook.Load("C:\\Users\\LENOVO\\Downloads\\Parameter.xlsx");
+            WorkBook workbook = WorkBook.Load("C:\\Users\\LENOVO\\Downloads\\ParameterUpdated.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Data");
             DataTable dt = sheet.ToDataTable(true);
 

@@ -3,7 +3,6 @@ import { Box, Grid } from "@mui/material";
 import BaseLayout from "components/Customized/BaseLayout";
 import MDButton from "components/MDButton";
 import { useNavigate } from "react-router-dom";
-
 import PAGES from "navigation/pages";
 import { useSelector } from "react-redux";
 import useExam from "./hooks/useExam";
@@ -11,12 +10,11 @@ import SelectedExamAlert from "./components/SelectedExamAlert";
 import ParameterFiltersCard from "./components/ParameterFiltersCard";
 import ParametersTable from "./components/ParametersTable";
 import PatientDetails from "./components/PatientDetailsCard";
-import HL7MeasurementsCard from "./components/HL7MeasurementsCard";
 import DiagramChart from "./components/DiagramChart";
 
 function ExamDetail() {
   const { params } = useExam();
-  const targetExam = useSelector((state) => state.exam.targetExam);
+  const targetExam = useSelector((state) => state.exam.examReport);
 
   const [poh, setPOH] = useState(undefined);
   const navigate = useNavigate();
@@ -64,9 +62,6 @@ function ExamDetail() {
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <PatientDetails />
-            </Grid>
-            <Grid item xs={12}>
-              <HL7MeasurementsCard />
             </Grid>
           </Grid>
         </Grid>

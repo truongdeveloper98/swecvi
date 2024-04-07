@@ -7,6 +7,7 @@ import TsGridTable from "components/Customized/TsGridTable";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import EditIcon from "@mui/icons-material/Edit";
 import useSettings from "./hooks/useSettings";
 import { getSettingsRequest } from "./services";
 
@@ -28,6 +29,10 @@ export default function ParameterSettings() {
       id: "parameterId",
       header: "Parameter Id",
     }),
+    columnHelper.accessor("departmentName", {
+      id: "departmentName",
+      header: "Department",
+    }),
     columnHelper.accessor("showInChart", {
       id: "showInChart",
       header: "Show In Chart",
@@ -39,10 +44,6 @@ export default function ParameterSettings() {
     columnHelper.accessor("showInAssessmentText", {
       id: "showInAssessmentText",
       header: "show In Assessment Text",
-    }),
-    columnHelper.accessor("parameterId", {
-      id: "parameterId",
-      header: "Parameter Id",
     }),
     columnHelper.accessor("textFriendlyName", {
       id: "textFriendlyName",
@@ -76,8 +77,8 @@ export default function ParameterSettings() {
       id: "description",
       header: "Description",
     }),
-    columnHelper.accessor("functionSelector", {
-      id: "functionSelector",
+    columnHelper.accessor("functionSelectorName", {
+      id: "functionSelectorName",
       header: "Function Selector",
     }),
     columnHelper.accessor("", {
@@ -85,7 +86,9 @@ export default function ParameterSettings() {
       header: () => null,
       cell: ({ row }) => (
         <Box style={{ textAlign: "right" }}>
-          <Button onClick={() => handleEditSettings(row.original.id)}>Edit</Button>
+          <Button onClick={() => handleEditSettings(row.original.id)}>
+            <EditIcon />
+          </Button>
         </Box>
       ),
     }),

@@ -19,18 +19,24 @@ namespace SWECVI.Infrastructure.Services
         private readonly IPatientRepository _patientRepository;
         private readonly IParameterRepository _parameterRepository;
         private readonly IStudyRepository _studyRepository;
+        private readonly IManufacturerDicomParametersRepository _manufacturerDicomParametersRepository;
+        private readonly IDicomTagRepository _dicomTagRepository;
 
         public PatientService(IPatientRepository patientRepository,
                 IParameterRepository parameterRepository,
-                IStudyRepository studyRepository
+                IStudyRepository studyRepository,
+                IDicomTagRepository dicomTagRepository,
+                IManufacturerDicomParametersRepository manufacturerDicomParametersRepository
             )
         {
             _patientRepository = patientRepository;
             _parameterRepository = parameterRepository;
             _studyRepository = studyRepository;
+            _manufacturerDicomParametersRepository = manufacturerDicomParametersRepository;
+            _dicomTagRepository = dicomTagRepository;
         }
 
-        public async Task<bool> Create(DicomResultMirthViewModel model, int hospitalId, List<ManufacturerDicomParameters> manufacturerDicomParameters, List<DicomTags> dicomTags)
+        public async Task<bool> Create(DicomResultMirthViewModel model, int hospitalId, List<ManufacturerDicomParameters> manufacturerDicomParameters, List<DicomTags> dicomTags, List<ParameterVaueViewModel> Parameters)
         {
             var existsPatient = _patientRepository.FirstOrDefault(x => x.PatientId == model.PatientId);
 
@@ -67,7 +73,7 @@ namespace SWECVI.Infrastructure.Services
                     Height = Convert.ToSingle(string.IsNullOrEmpty(model.StudyHeight) ? "0" : model.StudyHeight),
                     Weight = Convert.ToSingle(string.IsNullOrEmpty(model.StudyWeight) ? "0" : model.StudyWeight),
                     InstitutionName = model.InstitutionName,
-                    StudyDescription = model.StudyDescription,
+                    StudyDescription = string.IsNullOrEmpty(model.StudyDescription) ? "TTE" : model.StudyDescription,
                     StudyInstanceUID = model.StudyInstanceUID,
                     StudyID = model.StudyId,
                     StudyDateTime = Helpers.FormatStringToDate(model.StudyDate, model.StudyTime),
@@ -101,7 +107,7 @@ namespace SWECVI.Infrastructure.Services
                         ParameterId = item.NameCode
                     };
 
-                    if(item.NameCode.Split("|")[1].Trim() == "18072-9")
+                    if (item.NameCode.Split("|")[1].Trim() == "18026-5")
                     {
 
                     }
@@ -183,32 +189,32 @@ namespace SWECVI.Infrastructure.Services
                                 }
                             }
 
-                            if(imageId > 0 && findings.Count() > 1)
+                            if (imageId > 0)
                             {
                                 findings = findings.Where(x => x.ImageMode == imageId);
                             }
 
-                            if (imageViewId > 0 && findings.Count() > 1)
+                            if (imageViewId > 0)
                             {
                                 findings = findings.Where(x => x.ImageView == imageViewId);
                             }
 
-                            if (findingSiteId > 0 && findings.Count() > 1)
+                            if (findingSiteId > 0)
                             {
                                 findings = findings.Where(x => x.FindingSite == findingSiteId);
                             }
 
-                            if (cardiacCycleId > 0 && findings.Count() > 1)
+                            if (cardiacCycleId > 0)
                             {
                                 findings = findings.Where(x => x.CardiacPhase == cardiacCycleId);
                             }
 
-                            if (measurementMethodId > 0 && findings.Count() > 1)
+                            if (measurementMethodId > 0)
                             {
                                 findings = findings.Where(x => x.MeasurementMethod == measurementMethodId);
                             }
 
-                            if (directionOfFlowId > 0 && findings.Count() > 1)
+                            if (directionOfFlowId > 0)
                             {
                                 findings = findings.Where(x => x.FlowDirection == directionOfFlowId);
                             }
@@ -234,6 +240,244 @@ namespace SWECVI.Infrastructure.Services
 
             return true;
         }
+
+        //public async Task<bool> Create(DicomResultMirthViewModel model, int hospitalId, List<ManufacturerDicomParameters> manufacturerDicomParameters, List<DicomTags> dicomTags, List<ParameterVaueViewModel> parameterResultViewModels)
+        //{
+        //    var existsPatient = _patientRepository.FirstOrDefault(x => x.PatientId == model.PatientId);
+
+        //    if (existsPatient is null)
+        //    {
+
+        //        var partient = new Patient()
+        //        {
+        //            FirstName = model.PatientName,
+        //            PatientId = model.PatientId,
+        //            Sex = model.PatientSex,
+        //            DOB = Helpers.FormatStringToDate(model.PatientDate),
+        //            LastName = model.PatientName
+        //        };
+
+        //        await _patientRepository.Add(partient);
+
+        //        existsPatient = partient;
+        //    }
+
+
+        //    var existsStudy = _studyRepository.FirstOrDefault(x => x.StudyID == model.StudyId && x.StudyInstanceUID == model.StudyInstanceUID && x.PatientId == existsPatient.Id);
+
+        //    if (existsStudy is null)
+        //    {
+        //        string bsa = string.IsNullOrEmpty(model.BSA) ? "0" : model.BSA;
+        //        var study = new Study()
+        //        {
+        //            AccessionNumber = model.AccessionNumber,
+        //            BodySurfaceArea = Convert.ToSingle(bsa),
+        //            ContentDateTime = DateTime.Now,
+        //            CreatedAt = DateTime.Now,
+        //            DiastoilccBloodPressure = string.Empty,
+        //            Height = Convert.ToSingle(string.IsNullOrEmpty(model.StudyHeight) ? "0" : model.StudyHeight),
+        //            Weight = Convert.ToSingle(string.IsNullOrEmpty(model.StudyWeight) ? "0" : model.StudyWeight),
+        //            InstitutionName = model.InstitutionName,
+        //            StudyDescription = model.StudyDescription,
+        //            StudyInstanceUID = model.StudyInstanceUID,
+        //            StudyID = model.StudyId,
+        //            StudyDateTime = Helpers.FormatStringToDate(model.StudyDate, model.StudyTime),
+        //            SOPClassUID = model.SOPClassUID,
+        //            SOPInstanceUID = model.SOPInstanceUID,
+        //            InstitutionalDepartmentName = model.InstitutionalDepartmentName,
+        //            PatientId = existsPatient.Id,
+        //            ModalitiesInStudy = string.Empty,
+        //            SystolicBloodPressure = string.Empty,
+        //            SoftwareVersion = "1.0",
+        //            Manufacture = model.Manufacture,
+        //            ManufactureModel = model.ManufactureName,
+        //            Age = ExamHelper.Age(existsPatient.DOB, string.Empty, Helpers.FormatStringToDate(model.StudyDate, model.StudyTime)) ?? 0
+        //        };
+
+        //        await _studyRepository.Add(study);
+
+        //        existsStudy = study;
+        //    }
+
+        //    string parameterId = string.Empty;
+
+        //    foreach (var item in model.Parameters)
+        //    {
+        //        if (!string.IsNullOrEmpty(item.Name))
+        //        {
+        //            var valueInMatch = item.Value.Split('.');
+
+        //            var valueFromDicom = valueInMatch[0] + valueInMatch[1].Substring(0, 2);
+
+        //            var itemFind = new ParameterVaueViewModel();
+
+        //            foreach (var par in parameterResultViewModels)
+        //            {
+        //                if (!string.IsNullOrEmpty(par.ResultValue))
+        //                {
+        //                    var valueInMatchTag = par.ResultValue.Split('.');
+
+        //                    var valueFromDicomTag = valueInMatchTag[0] + valueInMatchTag[1].Substring(0, 2);
+
+
+        //                    if (valueFromDicomTag == valueFromDicom)
+        //                    {
+        //                        itemFind = par;
+        //                        break;
+        //                    }
+        //                }
+
+        //            }
+
+        //            if (itemFind != null)
+        //            {
+        //                if (!string.IsNullOrEmpty(itemFind.ParameterId))
+        //                {
+        //                    parameterId = itemFind.ParameterId;
+
+
+        //                    var parameter = new StudyParameter()
+        //                    {
+        //                        ResultValue = Convert.ToSingle(item.Value),
+        //                        StudyIndex = existsStudy.Id,
+        //                        ValueUnit = item.ValueUnitCode,
+        //                        ParameterId = parameterId,
+        //                    };
+
+        //                    var cv = item.NameCode.Split("|")[1].Trim();
+        //                    var csd = item.NameCode.Split("|")[0].Trim();
+
+        //                    var manufacturerDicomParameter = await _manufacturerDicomParametersRepository.Get(x => x.ParameterId == parameterId);
+
+
+        //                    int? imageId = null;
+        //                    int? findingSiteId = null;
+        //                    int? imageViewId = null;
+        //                    int? cardiacCycleId = null;
+        //                    int? respiratoryCycleId = null;
+        //                    int? measurementMethodId = null;
+        //                    int? derivationId = null;
+        //                    int? selectionStatusId = null;
+        //                    int? directionOfFlowId = null;
+
+        //                    if (item.ParameterDetails.Count > 0)
+        //                    {
+        //                        foreach (var itemDetail in item.ParameterDetails)
+        //                        {
+        //                            if (itemDetail.Name.Contains("Image Mode"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                imageId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Finding Site"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                findingSiteId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Image View"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                imageViewId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Cardiac Cycle Point"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                cardiacCycleId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Respiratory Cycle Point"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                respiratoryCycleId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Measurement Method"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                measurementMethodId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Derivation"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                derivationId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+
+        //                            }
+        //                            else if (itemDetail.Name.Contains("Direction of Flow"))
+        //                            {
+        //                                var cvDetail = itemDetail.ValueCode.Split("|")[1].Trim();
+        //                                var csdDetail = itemDetail.ValueCode.Split("|")[0].Trim();
+        //                                directionOfFlowId = _dicomTagRepository.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail) == null ? null : dicomTags.FirstOrDefault(x => x.CV == cvDetail && x.CSD == csdDetail).Id;
+        //                            }
+        //                        }
+
+        //                        if (manufacturerDicomParameter != null)
+        //                        {
+        //                            manufacturerDicomParameter.ImageMode = imageId;
+        //                            manufacturerDicomParameter.ImageView = imageViewId;
+        //                            manufacturerDicomParameter.FindingSite = findingSiteId;
+        //                            manufacturerDicomParameter.MeasurementMethod = measurementMethodId;
+        //                            manufacturerDicomParameter.FlowDirection = directionOfFlowId;
+        //                            manufacturerDicomParameter.CardiacPhase = cardiacCycleId;
+        //                            manufacturerDicomParameter.UpdatedAt = DateTime.Now;
+
+        //                            await _manufacturerDicomParametersRepository.Update(manufacturerDicomParameter);
+        //                        }
+        //                        else
+        //                        {
+        //                            var manufacturerDicom = new ManufacturerDicomParameters()
+        //                            {
+        //                                ProviderId = "GE",
+        //                                ProviderParameterId = "GE" + parameterId,
+        //                                ParameterId = parameterId,
+        //                                ProviderParameterShortName = itemFind.ParameterName,
+        //                                ParameterNameLogic = itemFind.ParameterName,
+        //                                MeasurementCSD = csd,
+        //                                MeasurementCV = cv,
+        //                                MeasurementCM = item.Name,
+        //                                FindingSite = findingSiteId,
+        //                                ImageMode = imageId,
+        //                                ImageView = imageViewId,
+        //                                CardiacPhase = cardiacCycleId,
+        //                                MeasurementMethod = measurementMethodId,
+        //                                CreatedAt = DateTime.Now
+        //                            };
+
+        //                            await _manufacturerDicomParametersRepository.Add(manufacturerDicom);
+        //                        }
+
+        //                        //parameter.ImageMode = (int)imageId;
+        //                        //parameter.ImageView = (int)imageViewId;
+        //                        //parameter.FindingSite = (int)findingSiteId;
+        //                        //parameter.MeasurementMethod = (int)measurementMethodId;
+        //                        //parameter.DirectionOfFlow = (int)directionOfFlowId;
+        //                        //parameter.Derivation = (int)derivationId;
+        //                        //parameter.CardiacCyclePoint = (int)cardiacCycleId;
+
+        //                        //await _parameterRepository.Add(parameter);
+        //                    }
+        //                }
+        //                else
+        //                {
+
+        //                }
+        //            }
+
+
+        //        }
+        //    }
+
+        //    return true;
+        //}
 
         public async Task<bool> Delete(int id)
         {
@@ -413,11 +657,12 @@ namespace SWECVI.Infrastructure.Services
             Expression<Func<Study, PatientStudyViewModel>> selectorExpression = i => new PatientStudyViewModel
             {
                 Id = i.Id,
-                DicomStudyId = i.StudyID,
                 Date = i.StudyDateTime.Date.ToString(),
                 Time = i.StudyDateTime.TimeOfDay.ToString(),
                 Height = i.Height,
-                Weight = i.Weight
+                Weight = i.Weight,
+                StudyType = i.StudyDescription,
+                AccessionNumber = i.AccessionNumber
             };
 
             var exams = await _studyRepository.QueryAndSelectAsync(selector: selectorExpression, filter: filter, null, "Patient");

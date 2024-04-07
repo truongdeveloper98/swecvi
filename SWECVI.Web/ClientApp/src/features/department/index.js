@@ -6,13 +6,15 @@ import { useSelector } from "react-redux";
 import { createColumnHelper } from "@tanstack/react-table";
 import { useTranslation } from "react-i18next";
 import { Box, Button } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 import useDepartment from "./hooks/useDepartment";
 import { getDepartmentRequest } from "./services";
 
 const columnHelper = createColumnHelper();
 
 export default function Department() {
-  const { agRef, onCreateDepartment, handleEditDepartment } = useDepartment();
+  const { agRef, onCreateDepartment, handleEditDepartment, handleDeleteDepartment } =
+    useDepartment();
   const { t } = useTranslation();
   const departments = useSelector((state) => state.department.departments);
   const columns = [
@@ -25,12 +27,14 @@ export default function Department() {
       header: "Department Name",
     }),
     columnHelper.accessor("", {
-      id: "action",
-      header: () => null,
+      id: "edit",
+      header: () => "Edit",
       maxSize: 20,
       cell: ({ row }) => (
-        <Box style={{ textAlign: "right" }}>
-          <Button onClick={() => handleEditDepartment(row.original.id)}>Edit</Button>
+        <Box>
+          <Button onClick={() => handleEditDepartment(row.original.id)}>
+            <EditIcon />
+          </Button>
         </Box>
       ),
     }),
@@ -44,6 +48,7 @@ export default function Department() {
         entity={departments}
         onFetching={getDepartmentRequest}
         onCreate={onCreateDepartment}
+        onDelete={handleDeleteDepartment}
         entityName={t("Department")}
         isExpand={false}
       />

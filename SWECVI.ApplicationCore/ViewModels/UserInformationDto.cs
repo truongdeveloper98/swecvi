@@ -1,3 +1,4 @@
+using SWECVI.ApplicationCore.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace SWECVI.ApplicationCore.ViewModels
@@ -14,7 +15,12 @@ namespace SWECVI.ApplicationCore.ViewModels
         public string[] Roles { set; get; }
         [Required]
         public string Email { set; get; }
+        [Required]
+        public string Password { set; get; }
+        public string Role { set; get; }
+        public string Department { set; get; }
         public bool IsActive { set; get; } = true;
         public int? IndexDepartment { set; get; }
+        public AppUser AppUser { get; set; }
     }
 }

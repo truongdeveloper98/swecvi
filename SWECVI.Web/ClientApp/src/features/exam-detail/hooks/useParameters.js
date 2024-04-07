@@ -1,5 +1,5 @@
-// import { functionSelectorsRequest } from "features/parameters/services";
-import { useState } from "react";
+import { functionSelectorsRequest } from "features/parameters/services";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPageSize } from "stores/reducers/common.reducer";
 
@@ -8,9 +8,9 @@ const useParameters = (filter) => {
   const dispatch = useDispatch();
   const [gridApi, setGridApi] = useState(null);
 
-  // useEffect(() => {
-  //   functionSelectorsRequest();
-  // }, []);
+  useEffect(() => {
+    functionSelectorsRequest();
+  }, []);
 
   const measurements = useSelector(({ exam }) =>
     filter

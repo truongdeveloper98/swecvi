@@ -1,20 +1,15 @@
 import React, { useMemo } from "react";
 import PieChart from "examples/Charts/PieChart";
-import { useTranslation } from "react-i18next";
-// import useExamTypes from "./useExamTypes";
+import useExamTypes from "./useExamTypes";
 
 export default function ExamTypesChart() {
-  // const { examTypes } = useExamTypes();
-
-  const { t } = useTranslation();
-
+  const { examTypes } = useExamTypes();
   const chart = useMemo(
     () => (
       <PieChart
-        title={t("ExamTypes")}
+        title="Exam Types"
         chart={{
-          // labels: examTypes?.map((x) => x?.type),
-          labels: [],
+          labels: examTypes?.map((x) => x?.type),
           datasets: {
             label: "Projects",
             backgroundColors: [
@@ -27,13 +22,12 @@ export default function ExamTypesChart() {
               "light",
               "dark",
             ],
-            // data: examTypes?.map((x) => x?.count),
-            data: [],
+            data: examTypes?.map((x) => x?.count),
           },
         }}
       />
-    )
-    // [JSON.stringify(examTypes)]
+    ),
+    [JSON.stringify(examTypes)]
   );
   return chart;
 }

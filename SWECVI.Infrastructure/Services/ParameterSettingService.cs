@@ -1,20 +1,26 @@
 ﻿using SWECVI.ApplicationCore.Entities;
 using SWECVI.ApplicationCore.Interfaces;
+using SWECVI.ApplicationCore.Interfaces.Repositories;
 using SWECVI.ApplicationCore.Interfaces.Services;
 using SWECVI.ApplicationCore.Utilities;
 using SWECVI.ApplicationCore.ViewModels;
+using SWECVI.Infrastructure.Repositories;
 using System.Linq.Expressions;
+using static SWECVI.ApplicationCore.Enum;
 
 namespace SWECVI.Infrastructure.Services
 {
     public class ParameterSettingService : IParameterSettingService
     {
         private readonly IParameterSettingRepository _parameterSettingRepository;
+        private readonly IDepartmentRepository _departmentRepository;
 
 
-        public ParameterSettingService(IParameterSettingRepository parameterSettingRepository)
+        public ParameterSettingService(IParameterSettingRepository parameterSettingRepository,
+            IDepartmentRepository departmentRepository)
         {
             _parameterSettingRepository = parameterSettingRepository;
+            _departmentRepository = departmentRepository;
         }
 
         public async Task<ParameterSettingViewModel> GetById(int id)
@@ -42,7 +48,7 @@ namespace SWECVI.Infrastructure.Services
                 POH = setting.POH,
                 Description = setting.Description,
                 FunctionSelector = setting.FunctionSelector,
-                DepartmentId = setting.DepartmentId
+                DepartmentName = setting.DepartmentId != null ? (_departmentRepository.FirstOrDefault(x => x.Id == setting.DepartmentId.Value, null, "")).Name : string.Empty,
             };
 
             return result;
@@ -54,7 +60,8 @@ namespace SWECVI.Infrastructure.Services
 
             if (!string.IsNullOrEmpty(textSearch))
             {
-                Expression<Func<ParameterSetting, bool>> searchFilter = i => i.ParameterId.Contains(textSearch) 
+                Expression<Func<ParameterSetting, bool>> searchFilter = i => i.ParameterId.Contains(textSearch)
+                                         || i.TableFriendlyName.Contains(textSearch)
                                          || i.ParameterHeader.Contains(textSearch);
 
                 filter = PredicateBuilder.AndAlso(filter, searchFilter);
@@ -76,8 +83,8 @@ namespace SWECVI.Infrastructure.Services
                 ParameterHeaderOrder = i.ParameterHeaderOrder,
                 POH = i.POH,
                 Description = i.Description,
-                FunctionSelector = i.FunctionSelector,
-                DepartmentId = i.DepartmentId
+                FunctionSelectorName = i.FunctionSelector == FunctionSelector.Min ? "Min" : i.FunctionSelector == FunctionSelector.Max ? "Max" : i.FunctionSelector == FunctionSelector.Avg ? "Avg" : i.FunctionSelector == FunctionSelector.Latest ? "Lastest" : string.Empty,
+                DepartmentId = i.DepartmentId,
             };
 
 
@@ -90,8 +97,10 @@ namespace SWECVI.Infrastructure.Services
                     orderBy: m => PredicateBuilder.ApplyOrder(m, sortColumnName, sortColumnDirection),
                     "",
                     pageSize,
-                    page: currentPage
-                );
+            page: currentPage
+            );
+
+            items.ToList().ForEach(i => i.DepartmentName = i.DepartmentId != null ? (_departmentRepository.FirstOrDefault(x => x.Id == i.DepartmentId.Value, null, "") == null ? string.Empty : _departmentRepository.FirstOrDefault(x => x.Id == i.DepartmentId.Value, null, "").Name) : string.Empty);
 
             return new PagedResponseDto<ParameterSettingViewModel>()
             {

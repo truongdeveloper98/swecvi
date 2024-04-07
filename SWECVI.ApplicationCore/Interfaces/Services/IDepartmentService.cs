@@ -6,6 +6,7 @@ namespace SWECVI.ApplicationCore.Interfaces.Services
     public interface IDepartmentService
     {
         Task<DepartmentViewModel> GetById(int id);
+        Task<bool> DeleteDepartment(int id);
         Task<PagedResponseDto<DepartmentViewModel>> GetDepartments(int currentPage, int pageSize, string? sortColumnDirection, string? sortColumnName, string? textSearch);
         Task<bool> CreateDepartment(DepartmentViewModel model);
         Task<bool> UpdateDepartment(int id, DepartmentViewModel model);

@@ -7,7 +7,7 @@ import useDiagramChart from "../hooks/useDiagramChart";
 import { colors } from "../constants";
 
 export default function DiagramChart() {
-  const { getArrLabels, data } = useDiagramChart();
+  const { getParameterValues, getArrLabels, data } = useDiagramChart();
   const parameterName = useSelector((state) => state.statistic.parameterNames);
 
   const chart = useMemo(
@@ -41,7 +41,13 @@ export default function DiagramChart() {
         {chart}
       </Grid>
       <Grid item xs={12}>
-        <Selector multiple options={parameterName} label="Parameters" property="parameterName" />
+        <Selector
+          multiple
+          onChange={getParameterValues}
+          options={parameterName}
+          label="Parameters"
+          property="parameterName"
+        />
       </Grid>
     </Grid>
   );

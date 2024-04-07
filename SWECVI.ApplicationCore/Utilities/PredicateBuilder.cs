@@ -3,6 +3,7 @@ using SWECVI.ApplicationCore.Entities;
 using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Xml.Serialization;
 
 namespace SWECVI.ApplicationCore.Utilities
 {
@@ -14,6 +15,28 @@ namespace SWECVI.ApplicationCore.Utilities
         {
             var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
             return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
+        }
+
+        public static T FromXml<T>(this string xml)
+        {
+            T returnedXmlClass = default(T);
+            try
+            {
+                using (TextReader reader = new StringReader(xml))
+                {
+                    try
+                    {
+                        returnedXmlClass = (T)new XmlSerializer(typeof(T)).Deserialize(reader);
+                    }
+                    catch (InvalidOperationException e)
+                    {
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return returnedXmlClass;
         }
 
         public static Expression<Func<TItem, object>> GroupByExpression<TItem>(string[] propertyNames)
@@ -29,6 +52,30 @@ namespace SWECVI.ApplicationCore.Utilities
             return expr;
         }
 
+        public static string ConvertValue(string unit, double? value)
+        {
+            if (unit == "%" || unit == "cm")
+            {
+                return (value * 100).ToString();
+            }
+            else if (unit == "ml")
+            {
+                return (value * 1000000).ToString();
+            }
+            else if (unit == "cm2")
+            {
+                return (value * 10000).ToString();
+            }
+            else if (unit == "g" || unit == "mm")
+            {
+                return (value * 1000).ToString();
+            }
+
+            return value.ToString();
+
+        }
+
+      
         public static IOrderedQueryable<T> ApplyOrder<T>(IQueryable<T> source, string property, string methodName)
         {
             if (!string.IsNullOrEmpty(property))
